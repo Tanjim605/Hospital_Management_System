@@ -5,15 +5,15 @@ using namespace std;
 #include <unistd.h>     //for sleep(sec)
 #include "ui.h"
 #include "user.h"
-
-
+ 
+ 
 void welcome()
 {
     system("CLS");
     for(int i=0;i<172;i++)
     {
         cout<<'_';
-        Sleep(10);      //works in milisecond
+        Sleep(3);      //works in milisecond
     }
     for(int i=150;i>=78;i--)
     {
@@ -21,19 +21,19 @@ void welcome()
         cout << "                        " << endl;
         gotoxy(i,3);
         cout << "Welcome To The Hospital" << endl;
-        Sleep(25);      //works in milisecond
+        Sleep(10);      //works in milisecond
     }
     cout<<endl;
     for(int i=0;i<172;i++)
     {
         cout<<'_';
-        Sleep(10);      
+        Sleep(3);      
     }
-    
-    sleep(3);           //works in second
+ 
+    sleep(1);           //works in second
     system("CLS");
-
-
+ 
+ 
     for(int i=0;i<172;i++)
     {
         cout<<'_';
@@ -45,7 +45,7 @@ void welcome()
     {
         cout<<'_';
     }
-    sleep(3);
+    sleep(1);
     cout << endl << "Press enter to continue...";
     cin.get();
     system("CLS");
