@@ -14,16 +14,26 @@ int is_valid(string bld_grp)
         return f;
     }
     return f;
-} 
+}
+
 string nurse_id_generator()
 {
+    ifstream ln("nurse/last_nurse.txt");
+    int last_nurse;
+    ln >> last_nurse;
     string str;
-    int new_id = 1000+number_of_nurse+1;
+    int new_id = 1000+last_nurse+1;
+    ln.close();
+    last_nurse++;
+    ofstream lsn("nurse/last_nurse.txt");
+    lsn << last_nurse;
+    lsn.close();
     str+='N';
     str+=to_string(new_id);
 
     return str;
 }
+
 void add_nurse()
 {
     read_nurse();

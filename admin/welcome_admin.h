@@ -6,7 +6,7 @@ void welcome_admin()
     up:
     int ch;
     system("CLS");
-    cout << "\t\tChoose an Option: \n\n\t\t  1. Log in\n\t\t  0. Exit\n";
+    cout << "\n\n\t\tChoose an Option: \n\n\t\t  1. Log in\n\t\t  0. Exit\n";
     cin >> ch;
     if (ch == 1)
         login_admin();

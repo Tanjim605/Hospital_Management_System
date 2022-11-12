@@ -6,7 +6,7 @@ void admin_work()
     {
         char c;
         system("CLS");
-        cout << "\t\tWelcome! *" << admin[m].id << "*" << endl << endl;
+        cout << "\n\n\t\tWelcome! *" << admin[m].id << "*" << endl << endl;
         cout << "\t\tChoose an Option: \n"
              << "\t\t  1. Add-Admin\n"
              << "\t\t  2. Show-Admin\n"

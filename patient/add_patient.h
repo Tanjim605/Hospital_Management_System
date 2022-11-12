@@ -12,6 +12,7 @@ int is_valid_gender(string s)
     cout<<"Gender : ";
     return 0;
 }
+
 int is_valid_Blood_Group(string bld_grp)
 {
     for(int i=0;i<bld_grp.length();i++)
@@ -29,32 +30,43 @@ int is_valid_Blood_Group(string bld_grp)
     }
     return f;
 }
+
 string patient_id_generator()
 {
+    ifstream lp("patient/last_patient.txt");
+    int last_patient;
+    lp >> last_patient;
     string str;
-    int new_id = 1000+number_of_patient+1;
+    int new_id = 1000+last_patient+1;
+    lp.close();
+    last_patient++;
+    ofstream lsp("patient/last_patient.txt");
+    lsp << last_patient;
+    lsp.close();
     str+='P';
     str+=to_string(new_id);
+    
     return str;
 }
+
 void add_patient()
 {
     read_patient();
     patient new_patient;
-    cout<<"\n\nADDING NEW PATIENT DETAILS\n";
-    cout<<"------------------------\n";
+    cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
+    cout<<"\t\t------------------------\n";
     cin.ignore();
-    cout<<"ID           : ";
+    cout<<"\t\tID           : ";
     new_patient.id = patient_id_generator();
     cout<<new_patient.id<<endl;
     cout<<endl;
-    cout<<"Patient Name : ";
+    cout<<"\t\tPatient Name : ";
     getline(cin,new_patient.name);
     cout<<endl;
-    cout<<"Age          : ";
+    cout<<"\t\tAge          : ";
     getline(cin,new_patient.age);
     cout<<endl;
-    cout<<"Gender(M/F)  : ";
+    cout<<"\t\tGender(M/F)  : ";
     while(getline(cin,new_patient.gender))
     {
         if(is_valid_gender(new_patient.gender))
@@ -68,10 +80,10 @@ void add_patient()
         }
     }
     cout<<endl;
-    cout<<"Moblie No.   : ";
+    cout<<"\t\tMoblie No.   : ";
     getline(cin,new_patient.mobile_no);
     cout<<endl;
-    cout<<"Blood Group  : ";
+    cout<<"\t\tBlood Group  : ";
     while(getline(cin,new_patient.blood_group))
     {
         if(is_valid_Blood_Group(new_patient.blood_group))

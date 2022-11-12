@@ -1,11 +1,21 @@
 string doctor_id_generator()
 {
+    ifstream ld("doctor/last_doctor.txt");
+    int last_doctor;
+    ld >> last_doctor;
     string str;
-    int new_id = 1000+number_of_doctor+1;
+    int new_id = 1000+last_doctor+1;
+    ld.close();
+    last_doctor++;
+    ofstream lsd("doctor/last_doctor.txt");
+    lsd << last_doctor;
+    lsd.close();
     str+='D';
     str+=to_string(new_id);
+    
     return str;
 }
+
 void add_doctor()        //adding new doctor.
 {
     read_doctor();       //reading previous list for rewriting

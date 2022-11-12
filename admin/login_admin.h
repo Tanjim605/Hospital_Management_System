@@ -8,7 +8,7 @@ void login_admin()
     while (1)
     {
         system("CLS");
-        cout << "\t\tENTER USER   : ";
+        cout << "\n\n\t\tENTER USER   : ";
         getline(cin, id);
         for (int i = 0; i < n; i++)
         {
@@ -31,13 +31,13 @@ void login_admin()
     while (1)
     {
         system("CLS");
-        cout << "\t\tUSER         : " << admin[m].id << endl;
+        cout << "\n\n\t\tUSER         : " << admin[m].id << endl;
         cout << "\t\tENTER PASS   : ";
         for(int i=0; i<sz(admin[m].get_pass()); i++)
         {
             pass+=getch();
             system("CLS");
-            cout << "\t\tUSER         : " << admin[m].id << endl;
+            cout << "\n\n\t\tUSER         : " << admin[m].id << endl;
             cout << "\t\tENTER PASS   : ";
             for(int i=0; i<sz(pass); i++)
                 cout<<"*";
@@ -69,7 +69,7 @@ void login_admin()
             else
             {
                 system("CLS");
-                cout << "\t\tUSER         : " << admin[m].id << endl;
+                cout << "\n\n\t\tUSER         : " << admin[m].id << endl;
                 cout << "\t\tENTER PASS   : " << pass << endl << endl;
                 if(log_cnt<2)
                     cout<<"\t\tInvalid User or Password. You have "<<3-log_cnt<<" attempts left. Try again!" << endl << endl;
