@@ -15,6 +15,15 @@ int is_valid(string bld_grp)
     }
     return f;
 } 
+string nurse_id_generator()
+{
+    string str;
+    int new_id = 1000+number_of_nurse+1;
+    str+='N';
+    str+=to_string(new_id);
+
+    return str;
+}
 void add_nurse()
 {
     read_nurse();
@@ -23,7 +32,8 @@ void add_nurse()
     cout<<"\n\nADDING NEW NURSE DETAILS\n";
     cout<<"------------------------\n";
     cout<<"ID          : ";
-    getline(cin,new_nurse.id);
+    new_nurse.id = nurse_id_generator();
+    cout<<new_nurse.id<<endl;
     cout<<"Nurse Name  : ";
     getline(cin,new_nurse.name);
     cout<<"Mobile No.  : ";

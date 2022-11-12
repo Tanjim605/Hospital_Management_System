@@ -4,7 +4,7 @@ int is_valid_gender(string s)
     {
         s[i]=toupper(s[i]);
     }
-    if(s=="MALE" || s=="FEMALE")
+    if(s=="M" || s=="F")
     {
         return 1;
     }
@@ -29,7 +29,14 @@ int is_valid_Blood_Group(string bld_grp)
     }
     return f;
 }
-
+string patient_id_generator()
+{
+    string str;
+    int new_id = 1000+number_of_patient+1;
+    str+='P';
+    str+=to_string(new_id);
+    return str;
+}
 void add_patient()
 {
     read_patient();
@@ -38,7 +45,8 @@ void add_patient()
     cout<<"------------------------\n";
     cin.ignore();
     cout<<"ID           : ";
-    getline(cin,new_patient.id);
+    new_patient.id = patient_id_generator();
+    cout<<new_patient.id<<endl;
     cout<<endl;
     cout<<"Patient Name : ";
     getline(cin,new_patient.name);
@@ -46,7 +54,7 @@ void add_patient()
     cout<<"Age          : ";
     getline(cin,new_patient.age);
     cout<<endl;
-    cout<<"Gender       : ";
+    cout<<"Gender(M/F)  : ";
     while(getline(cin,new_patient.gender))
     {
         if(is_valid_gender(new_patient.gender))
