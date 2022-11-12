@@ -1,3 +1,11 @@
+string doctor_id_generator()
+{
+    string str;
+    int new_id = 1000+number_of_doctor+1;
+    str+='D';
+    str+=to_string(new_id);
+    return str;
+}
 void add_doctor()        //adding new doctor.
 {
     read_doctor();       //reading previous list for rewriting
@@ -8,7 +16,9 @@ void add_doctor()        //adding new doctor.
     cout<<"\t\t  ID             : ";
     string ss;
     getline(cin,ss);
-    getline(cin,new_doctor.id);
+    new_doctor.id = doctor_id_generator();
+    cout<<new_doctor.id<<endl;
+    // getline(cin,new_doctor.id);
     cout<<"\t\t  Doctor Name    : ";
     getline(cin,new_doctor.name);
     cout<<"\t\t  Doctor Degree  : ";
