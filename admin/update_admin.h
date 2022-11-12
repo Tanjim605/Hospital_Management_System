@@ -93,14 +93,29 @@ void update_admin()
                 {
                     cout << "\t\tYou already have the same password! Press Enter to try again!";
                     getchar();
+                    continue;
                 }
                 else if(sz(upass)<6)
                 {
                     cout << "\t\tPASS have to be more than 5 characters. Press ENTER to try again!";
                     getchar();
+                    continue;
                 }
-                else
-                    break;
+                cout << "\t\tEnter Password Again  : ";
+                string upass2;
+                getline(cin, upass2);
+                while(upass!=upass2)
+                {
+                    cout << "\t\tPassword didn't matched..\n"
+                         << "\t\tPlease Try Again..";
+                        getchar(); 
+                    system("CLS");
+                    cout << "\t\t**PASSWORD require minimum 6 characters**\n\n";
+                    cout << "\t\tEnter a new Password  : "<<upass<<endl;
+                    cout << "\t\tEnter Password Again  : ";
+                    getline(cin, upass2);   
+                }
+                break;
             }
             while (1)
             {

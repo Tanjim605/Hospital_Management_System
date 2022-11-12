@@ -16,15 +16,15 @@ int welcome_patient()
         cout<<"\n\t\t  3: Search an individual patient's Information\n\n";
         cout<<"\n\t\t  4: Update an old Patient's Information\n\n";
         cout<<"\n\t\t  5: Show all Patient's Information\n\n";
-        cout<<"\n\t\t  Enter 0 to escape\n\n";
+        cout<<"\n\t\tEnter 0 to escape\n\n";
         int option;
         cin>>option;
         system("CLS");
         if(option == 0)
         {
-             cout<<"\n\t\t\t\tStay with us\n\n";
-             sleep(2);
-             return 0;
+            // cout<<"\n\t\t\t\tStay with us\n\n";
+            sleep(1);
+            return 0;
         }
         nm=1;
         if(option>5 || option<1)
