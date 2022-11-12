@@ -2,9 +2,10 @@
 
 void welcome_doctor()
 {
+    system("CLS");
     if(mm==0){
         cout<<"\n\t\tWELCOME TO THE Doctor'S CRUD WORLD\n\n";
-        sleep(2);
+        sleep(1);
     }
     while(1)
     {
@@ -14,14 +15,14 @@ void welcome_doctor()
         cout<<"\n\t\t  2: Remove a doctor's Information\n\n";
         cout<<"\n\t\t  3: Update a doctor's Information\n\n";
         cout<<"\n\t\t  4: Show all doctor's Information\n\n";
-        cout<<"\n\t\t  Enter 0 to escape\n\n";
+        cout<<"\n\t\tEnter 0 to escape\n\n";
         int option;
         cin>>option;
         system("CLS");
         if(option == 0)
         {
-            cout<<"\n\t\t\t\tStay with us\n\n";
-            sleep(2);
+            // cout<<"\n\t\t\t\tStay with us\n\n";
+            sleep(1);
             break;
         }
         mm=1;

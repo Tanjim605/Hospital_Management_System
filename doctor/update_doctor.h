@@ -10,8 +10,10 @@ void update_doctor()
     if(option!=1)
     {
         cout<<endl<<"\t\tInvalid Option, Please try Again..\n\n";
-        update_doctor();
+        goto here;
+        // update_doctor();
     }
+    here:
     cout<<endl<<"\t\tPlease give me the Doctor's ID you want to change : ";
     cin>>idd;
     int f=0;
@@ -34,7 +36,8 @@ void update_doctor()
     {
         system("CLS");
         cout<<endl<<"\t\t:( Sorry couldn't find that ID, Please try Again..\n\n";
-        update_doctor();
+        goto here;
+        // update_doctor();
     }
     ofstream on("doctor/doctor.txt");
     int i=0;
