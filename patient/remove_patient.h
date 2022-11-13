@@ -7,9 +7,9 @@ void remove_patient()
     system("CLS");
     while(1)
     {
-        cout<<"\nDELTETING PATIENT DETAILS\n";
-        cout<<"-----------------------\n";
-        cout<<"ID          : ";
+        cout<<"\n\n\t\tDELTETING PATIENT DETAILS\n";
+        cout<<"\t\t-----------------------\n";
+        cout<<"\t\tID          : ";
         getline(cin,del_id);
         i=0,f=0;
         while(i<number_of_patient)

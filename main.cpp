@@ -27,13 +27,13 @@ int main()
         }
         if(logout!=1)
         {
-            cout<<"\t\tAdmin login successful!\n\n";
+            cout<<"\n\n\t\tAdmin login successful!\n\n";
             sleep(2);
             while(1)
             {
                 back:
                 system("CLS");
-                cout<<"\t\t*Welcome to Admin Panel*"<<endl
+                cout<<"\n\n\t\t*Welcome to Admin Panel*"<<endl
                     <<"\t\t------------------------"<<endl<<endl
                     <<"\t\t  1. Admin work"<<endl
                     <<"\t\t  2. Patient work"<<endl
@@ -65,7 +65,7 @@ int main()
         while(1)
         {
             system("CLS");
-            cout<<"\t\t*Welcome to our Hospital*"<<endl
+            cout<<"\n\n\t\t*Welcome to our Hospital*"<<endl
                 <<"\t\t-------------------------"<<endl<<endl
                 << "\t\t  1. Get Admitted" << endl
                 << "\t\t  2. Doctor List" << endl
@@ -73,12 +73,18 @@ int main()
                 << "\t\t  4. Exit" << endl;
             int choice;
             cin >> choice;
+            system("CLS");
+            
             if(choice==1)
                 add_patient();
             else if(choice == 2)
                 show_doctor();
             else if(choice==3)
+            {
+                system("CLS");
                 search_patient();
+            }
+                
             else
             {
                 system("CLS");

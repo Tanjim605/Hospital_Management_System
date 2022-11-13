@@ -1,8 +1,9 @@
 void show_doctor()           //presenting the doctor list in console
 {
+    system("CLS");
     read_doctor();           //read the txt file first
     int i =0;
-    cout<<"\t\tDoctor List : \n";
+    cout<<"\n\n\t\tDoctor List : \n";
     cout<<"\t\t-------------\n";
     while(i<number_of_doctor)
     {

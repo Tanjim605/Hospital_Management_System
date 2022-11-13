@@ -4,13 +4,13 @@ int welcome_patient()
 {
     system("CLS");
     if(nm==0){
-        cout<<"\n\t\tWELCOME TO THE PATIENT'S CRUD WORLD\n\n";
+        cout<<"\n\n\t\tWELCOME TO THE PATIENT'S CRUD WORLD\n\n";
         sleep(1);
     }
     while(1)
     {
         system("CLS");
-        cout<<"\n\t\tPlease select an option\n";
+        cout<<"\n\n\t\tPlease select an option\n";
         cout<<"\n\t\t  1: Add a new patient\n\n";
         cout<<"\n\t\t  2: Remove a patient's Information\n\n";
         cout<<"\n\t\t  3: Search an individual patient's Information\n\n";

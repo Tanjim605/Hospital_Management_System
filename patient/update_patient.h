@@ -4,9 +4,9 @@ void update_patient()
     read_patient();
     int option;
     string idd;
-    cout<<"Which info do you want to update?\n\n";
-    cout<<"1: Mobile Number?\n";
-    cout<<"2: Age?\n";
+    cout<<"\n\n\t\tWhich info do you want to update?\n\n";
+    cout<<"\t\t1: Mobile Number?\n";
+    cout<<"\t\t2: Age?\n";
     cin>>option;
     system("CLS");
     if(option!=1 && option != 2)
@@ -17,7 +17,7 @@ void update_patient()
     else
     {
         op:
-        cout<<endl<<"Please give me the patient's ID you want to change : ";
+        cout<<endl<<"\t\tPlease give me the patient's ID you want to change : ";
         cin>>idd;
         int f=0;
 
@@ -29,7 +29,7 @@ void update_patient()
                 if(option==1)
                 {
                     string m;
-                    cout<<"Enter the Mobile Number : ";
+                    cout<<"\t\tEnter the Mobile Number : ";
                     cin>>m;
                     pat[i].mobile_no=m;
                     cout<<endl<<"Mobile Number has been updated successfully\n\n";
@@ -37,7 +37,7 @@ void update_patient()
                 else if(option==2)
                 {
                     string m;
-                    cout<<"Enter the Age : ";
+                    cout<<"\t\tEnter the Age : ";
                     cin>>m;
                     pat[i].age=m;
                     cout<<endl<<"Age has been updated successfully\n\n";
@@ -48,7 +48,7 @@ void update_patient()
         if(f==0)
         {
             system("CLS");
-            cout<<endl<<":( Sorry couldn't find that ID, Please try Again..\n\n";
+            cout<<endl<<"\t:( Sorry couldn't find that ID, Please try Again..\n\n";
             goto op;
         }
         ofstream on("patient/patient.txt");

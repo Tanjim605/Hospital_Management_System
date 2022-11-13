@@ -5,14 +5,14 @@ void welcome_nurse()
 {
     if(nn==0){
         system("CLS");
-        cout<<"\n\t\tWELCOME TO THE NURSE'S CRUD WORLD\n\n";
+        cout<<"\n\n\t\tWELCOME TO THE NURSE'S CRUD WORLD\n\n";
         cout<<"\t\t---------------------------------\n";
         sleep(1);
     }
     // while(1)
     // {
         system("CLS");
-        cout<<"\n\tPlease select an option\n";
+        cout<<"\n\n\n\tPlease select an option\n";
         cout<<"\t-----------------------\n";
         cout<<"\n\t  1: Add a new nurse\n\n";
         cout<<"\n\t  2: Remove a nurse's Information\n\n";
