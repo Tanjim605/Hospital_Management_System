@@ -9,8 +9,8 @@ void row_line(int a)
 
 void info_line(string a,int len)
 {
-    cout<<"|"<<a;
-    for(int j=a.length();j<len;j++)
+    cout<<"| "<<a;
+    for(int j=a.length();j<len-1;j++)
     {
         cout<<" ";
     }
@@ -45,6 +45,7 @@ void nurse_list()               //presenting the nurse list in console
         i++;
     }
     mx_size = max(mx_size,11);
+    mx_size++;
     row_line(mx_size*4);
     firstline(mx_size);
     row_line(mx_size*4);
