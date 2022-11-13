@@ -8,7 +8,7 @@
 
 int main()
 {
-    //welcome();
+    welcome();
     abar:
     int user=get_user();
     if(user==0)
