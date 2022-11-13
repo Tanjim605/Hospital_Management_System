@@ -6,7 +6,7 @@ using namespace std;
 class patient:public person
 {
     public:
-    string id,blood_group,age,gender;
+    string id,blood_group,age,gender,reason;
 };
 int number_of_patient=0;
 patient pat[100];

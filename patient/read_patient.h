@@ -10,6 +10,7 @@ void read_patient()
         getline(in,pat[i].gender);
         getline(in,pat[i].mobile_no);
         getline(in,pat[i].blood_group);
+        getline(in,pat[i].reason);
         i++;
         getline(in,s);
      }

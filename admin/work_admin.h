@@ -2,9 +2,9 @@
 
 void admin_work()
 {
+    string cc;
     while (1)
     {
-        char c;
         system("CLS");
         cout << "\n\n\t\tWelcome! *" << admin[m].id << "*" << endl << endl;
         cout << "\t\tChoose an Option: \n"
@@ -12,27 +12,34 @@ void admin_work()
              << "\t\t  2. Show-Admin\n"
              << "\t\t  3. Update-info\n"<<endl
              << "\t\tEnter 0 to escape..."<<endl;
-        cin>>c;
-        if (c == '1')
+        cin>>cc;
+        if (cc == "1")
         {
             system("CLS");
             add_admin();
         }
-        if (c == '2')
+        else if (cc == "2")
         {
             system("CLS");
             show_admin();
         }
-        if (c == '3')
+        else if (cc == "3")
         {
             system("CLS");
             update_admin();
         }
-        if (c == '0')
+        else if (cc == "0")
         {
             back=1;
             system("CLS");
             return;
+        }
+        else
+        {
+            system("CLS");
+
+            cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
+            sleep(1);
         }
     }
 }

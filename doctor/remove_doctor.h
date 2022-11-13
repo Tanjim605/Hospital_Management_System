@@ -17,7 +17,7 @@ void delete_doctor()         //deleting a person. We take the ID of the person a
     getline(cin,del_id);                    //get the ID of the person who we want to delete
     ofstream doo("doctor/doctor.txt");             //opening file in write mode
     int i =0;
-    bool found =0;
+    bool found = 0;
     while(i<number_of_doctor)
     {
         if(del_id!=dr[i].id)                //if not the delete person ID then write his details
@@ -39,6 +39,7 @@ void delete_doctor()         //deleting a person. We take the ID of the person a
     {
         cout<<"\t\tID not found...\n"
         <<"\t\tPlease try again...\n";
+        sleep(1);
         goto here;
     }
     number_of_doctor--;         //total doctor number reduce by one as one doctor is deleted

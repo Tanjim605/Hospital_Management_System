@@ -8,8 +8,7 @@ int is_valid_gender(string s)
     {
         return 1;
     }
-    cout<<"\n\tInvalid Gender Try Again..\n\n";
-    cout<<"Gender : ";
+    cout<<"\n\tInvalid Gender, press enter to Try Again..\n\n";
     return 0;
 }
 
@@ -23,8 +22,7 @@ int is_valid_Blood_Group(string bld_grp)
     if(!(bld_grp=="A+"||bld_grp=="B+"||bld_grp=="O+"||bld_grp=="AB+"||
         bld_grp=="A-"||bld_grp=="B-"||bld_grp=="AB-"||bld_grp=="O-"))
     {
-        cout<<"\n\tInvalid Blood Group Try Again..\n\n";
-        cout<<"Blood Group : ";
+        cout<<"\n\tInvalid Blood Group, press enter to Try Again..\n\n";
         f=0;
         return f;
     }
@@ -45,7 +43,7 @@ string patient_id_generator()
     lsp.close();
     str+='P';
     str+=to_string(new_id);
-    
+
     return str;
 }
 
@@ -67,17 +65,29 @@ void add_patient()
     getline(cin,new_patient.age);
     cout<<endl;
     cout<<"\t\tGender(M/F)  : ";
+
     while(getline(cin,new_patient.gender))
     {
         if(is_valid_gender(new_patient.gender))
         {
             new_patient.gender[0]=toupper(new_patient.gender[0]);
-            for(int i=1;i<new_patient.gender.length();i++)
-            {
-                new_patient.gender[i] = tolower(new_patient.gender[i]);
-            }
+//            for(int i=1;i<new_patient.gender.length();i++)
+//            {
+//                new_patient.gender[i] = tolower(new_patient.gender[i]);
+//            }
             break;
         }
+        cin.ignore();
+        system("CLS");
+        cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
+        cout<<"\t\t------------------------\n";
+        cout<<"\t\tID           : "<<new_patient.id<<endl;
+        cout<<endl;
+        cout<<"\t\tPatient Name : "<<new_patient.name<<endl;
+        cout<<endl;
+        cout<<"\t\tAge          : "<<new_patient.age<<endl;
+        cout<<endl;
+        cout<<"\t\tGender(M/F)  : ";
     }
     cout<<endl;
     cout<<"\t\tMoblie No.   : ";
@@ -94,8 +104,25 @@ void add_patient()
             }
             break;
         }
+        cin.ignore();
+        system("CLS");
+        cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
+        cout<<"\t\t------------------------\n";
+        cout<<"\t\tID           : "<<new_patient.id<<endl;
+        cout<<endl;
+        cout<<"\t\tPatient Name : "<<new_patient.name<<endl;
+        cout<<endl;
+        cout<<"\t\tAge          : "<<new_patient.age<<endl;
+        cout<<endl;
+        cout<<"\t\tGender(M/F)  : "<<new_patient.gender<<endl;
+        cout<<endl;
+        cout<<"\t\tMoblie No.   : "<<new_patient.mobile_no<<endl;
+        cout<<endl;
+        cout<<"\t\tBlood Group  : ";
     }
     cout<<endl;
+    cout<<"\t\tPatient problem  : ";
+    getline(cin,new_patient.reason);
     ofstream on("patient/patient.txt");
     int i=0;
     pat[number_of_patient].id = new_patient.id;
@@ -104,6 +131,7 @@ void add_patient()
     pat[number_of_patient].gender = new_patient.gender;
     pat[number_of_patient].mobile_no = new_patient.mobile_no;
     pat[number_of_patient].blood_group = new_patient.blood_group;
+    pat[number_of_patient].reason = new_patient.reason;
     number_of_patient++;
     while(i<number_of_patient)
     {
@@ -113,6 +141,7 @@ void add_patient()
         on<<pat[i].gender<<endl;
         on<<pat[i].mobile_no<<endl;
         on<<pat[i].blood_group<<endl;
+        on<<pat[i].reason<<endl;
         i++;
         on<<"\n";
     }
