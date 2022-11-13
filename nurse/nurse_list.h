@@ -69,4 +69,5 @@ void nurse_list()               //presenting the nurse list in console
         i++;
         cout<<"\n"<<endl;
     }
+    
 }
