@@ -1,22 +1,97 @@
-void show_doctor()           //presenting the doctor list in console
+string tr[5] ={"ID","NAME","DEGREE","COLLEGE","MOBILE NO."};
+
+void row_lin(int a)
 {
-    system("CLS");
-    read_doctor();           //read the txt file first
-    int i =0;
-    cout<<"\n\n\t\tDoctor List : \n";
-    cout<<"\t\t-------------\n";
+    for(int i=0;i<a+5;i++)
+        cout<<"-";
+    cout<<endl;
+}
+
+void info_lin(string a,int len)
+{
+    cout<<"| "<<a;
+    for(int j=a.length();j<len-1;j++)
+    {
+        cout<<" ";
+    }
+}
+
+void firstlin(int mx)
+{
+    for(int i=0;i<5;i++)
+    {
+        cout<<"| "<<tr[i];
+        for(int j=tr[i].length();j<mx-1;j++)
+        {
+            cout<<" ";
+        }
+    }
+    cout<<"|"<<endl;
+}
+
+void show_doctor()               //presenting the nurse list in console
+{
+    read_doctor();               //read the txt file first
+    cout<<"Doctor List : \n";
+    cout<<"------------\n";
+    int length[5]={0};
+    for(int j=0;j<5;j++)
+    {
+        int i = 0;
+        while(i<number_of_doctor)
+        {
+            if(j==0)
+                length[j] = max(length[j],(int)dr[i].id.length());
+            else if(j==1)
+                length[j] = max(length[j],(int)dr[i].name.length());
+            else if(j==2)
+                length[j] = max(length[j],(int)dr[i].degree.length());
+            else if(j==3)
+                length[j] = max(length[j],(int)dr[i].college.length());
+            else
+                length[j] = max(length[j],(int)dr[i].mobile_no.length());
+
+            i++;
+        }
+    }
+    int  len_row = 0;
+    for(int i=0;i<5;i++)
+        len_row+=max(length[i],(int)tr[i].length());
+    sort(length,length+5);
+    int mx_size = length[4];
+    mx_size++;
+    row_lin(mx_size*5);
+    firstlin(mx_size);
+    row_lin(mx_size*5);
+    int i = 0;
     while(i<number_of_doctor)
     {
-      //please check this line   ↓   this colon should be in line **********
-        cout<<"\t\t  ID          : "<<dr[i].id<<endl;
-        cout<<"\t\t  Name        : "<<dr[i].name<<endl;
-        cout<<"\t\t  Degree      : "<<dr[i].degree<<endl;
-        cout<<"\t\t  College     : "<<dr[i].college<<endl;
-        cout<<"\t\t  Mobile NO.  : "<<dr[i].mobile_no<<endl;
+        info_lin(dr[i].id,mx_size);
+        info_lin(dr[i].name,mx_size);
+        info_lin(dr[i].degree,mx_size);
+        info_lin(dr[i].college,mx_size);
+        info_lin(dr[i].mobile_no,mx_size);
+        cout<<"|"<<endl;
+        row_lin(mx_size*5);
         i++;
-        cout<<"\n"<<endl;
     }
-    cout<<"\t\tPress any key to proceed...";
+    cout<<"\n\t\tPress any enter to proceed...";
+    string enter;
     getchar();
-    getchar();
+    getchar();//1st getchar is for the chosen option 2nd is for enter
+
 }
+
+
+
+//while(i<number_of_doctor)
+//{
+//  //please check this line   ↓   this colon should be in line **********
+//    cout<<"\t\t  ID          : "<<dr[i].id<<endl;
+//    cout<<"\t\t  Name        : "<<dr[i].name<<endl;
+//    cout<<"\t\t  Degree      : "<<dr[i].degree<<endl;
+//    cout<<"\t\t  College     : "<<dr[i].college<<endl;
+//    cout<<"\t\t  Mobile NO.  : "<<dr[i].mobile_no<<endl;
+//    i++;
+//    cout<<"\n"<<endl;
+//}

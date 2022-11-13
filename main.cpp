@@ -74,7 +74,7 @@ int main()
             int choice;
             cin >> choice;
             system("CLS");
-            
+
             if(choice==1)
                 add_patient();
             else if(choice == 2)
@@ -84,7 +84,6 @@ int main()
                 system("CLS");
                 search_patient();
             }
-                
             else
             {
                 system("CLS");

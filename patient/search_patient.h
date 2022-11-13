@@ -12,12 +12,13 @@ void search_patient()
         if(pat[i].id==idd)
         {
             cout<<endl<<endl;       //just to make things beautiful
-            cout<<"\t\tID          : "<<pat[i].id<<endl;
-            cout<<"\t\tName        : "<<pat[i].name<<endl;
-            cout<<"\t\tAge         : "<<pat[i].age<<endl;
-            cout<<"\t\tGender      : "<<pat[i].gender<<endl;
-            cout<<"\t\tMobile NO.  : "<<pat[i].mobile_no<<endl;
-            cout<<"\t\tBlood Group : "<<pat[i].blood_group<<endl;
+            cout<<"\t\tID              : "<<pat[i].id<<endl;
+            cout<<"\t\tName            : "<<pat[i].name<<endl;
+            cout<<"\t\tAge             : "<<pat[i].age<<endl;
+            cout<<"\t\tGender          : "<<pat[i].gender<<endl;
+            cout<<"\t\tMobile NO.      : "<<pat[i].mobile_no<<endl;
+            cout<<"\t\tBlood Group     : "<<pat[i].blood_group<<endl;
+            cout<<"\t\tPatient Problem : "<<pat[i].reason<<endl;
             flag=0;
             break;
         }

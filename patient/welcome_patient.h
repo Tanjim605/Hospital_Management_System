@@ -2,6 +2,7 @@
 
 int welcome_patient()
 {
+    abar:
     system("CLS");
     if(nm==0){
         cout<<"\n\n\t\tWELCOME TO THE PATIENT'S CRUD WORLD\n\n";
@@ -33,7 +34,7 @@ int welcome_patient()
             sleep(2);
             system("CLS");
 
-            welcome_patient();
+            goto abar;
         }
         if(option == 1)
         {
