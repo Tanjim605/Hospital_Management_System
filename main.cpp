@@ -8,9 +8,9 @@
 
 int main()
 {
-    welcome();
+    //welcome();
     abar:
-    int user=get_user();    
+    int user=get_user();
     if(user==0)
         return 0;
     if(user==1) //admin er shob kaaj
