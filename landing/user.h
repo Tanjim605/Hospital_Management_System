@@ -1,5 +1,7 @@
-int get_user()
+string get_user()
 {
+    again:
+    system("CLS");
     for(int i=0;i<172;i++)
     {
         cout<<'_';
@@ -15,9 +17,14 @@ int get_user()
         cout<<'_';
     }
     cout<<endl<<endl;
- 
-    int u;
-    cin >> u;
- 
+    string u;
+    getline(cin,u);
+    if(u!="1" && u!="2" && u!="0")
+    {
+        system("CLS");
+        cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
+        sleep(1);
+        goto again;
+    }
     return u;
 }

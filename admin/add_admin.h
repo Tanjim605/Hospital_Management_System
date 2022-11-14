@@ -1,7 +1,6 @@
 void add_admin()
 {
     read_admin();
-    getchar();
     string nid, npass;
     while (1)
     {

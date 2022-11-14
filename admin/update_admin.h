@@ -1,16 +1,13 @@
 void update_admin()
 {
     read_admin();
-    string uid, upass, pass;
-    char t;
+    string uid, upass, pass,t;
     while (1)
     {
         system("CLS");
         cout << "\t\tPress 1 to update your USER!\n\t\tPress 2 to update your PASS!\n\t\tEnter 0 to escape...\n";
-        cin >> t;
-        system("CLS");
-        getchar();
-        if (t == '1')
+        getline(cin,t);
+        if (t == "1")
         {
             while(1)
             {
@@ -80,7 +77,7 @@ void update_admin()
                 pass.clear();
             }
         }
-        else if(t == '2')
+        else if(t == "2")
         {
             while(1)
             {
@@ -154,10 +151,16 @@ void update_admin()
                 pass.clear();
             }
         }
-        else
+        else if(t == "0")
         {
             write_admin();
             break;
+        }
+        else
+        {
+            system("CLS");
+            cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
+            sleep(1);
         }
     }
 }

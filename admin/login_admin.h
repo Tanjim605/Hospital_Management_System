@@ -4,7 +4,6 @@ void login_admin()
     read_admin();
     string id, pass;
     int f = 1;
-    getchar();
     while (1)
     {
         system("CLS");
@@ -70,7 +69,10 @@ void login_admin()
             {
                 system("CLS");
                 cout << "\n\n\t\tUSER         : " << admin[m].id << endl;
-                cout << "\t\tENTER PASS   : " << pass << endl << endl;
+                cout << "\t\tENTER PASS   : ";
+                for(int i=0; i<sz(pass); i++)
+                    cout<<"*";
+                cout << endl << endl;
                 if(log_cnt<2)
                     cout<<"\t\tInvalid User or Password. You have "<<3-log_cnt<<" attempts left. Try again!" << endl << endl;
                 else if(log_cnt==2)

@@ -8,7 +8,7 @@ D1002
 Mr. Jamil-as-ad
 MBBS
 CMC
-0215241
+018655934882
 
 D1003
 Takib Khan
@@ -16,9 +16,9 @@ MBBS
 DMC
 012121212121
 
-D1006
-alif
-mbbs
-cmc
-541545454
+D1004
+Alif Hossen
+MBBS
+CMC
+01541545454
 

@@ -24,8 +24,6 @@ void add_doctor()        //adding new doctor.
     cout<<"\t\t------------------------\n";
 //  this line please   ↓         //taking all of the details below
     cout<<"\t\t  ID             : ";
-    string ss;
-    getline(cin,ss);
     new_doctor.id = doctor_id_generator();
     cout<<new_doctor.id<<endl;
     // getline(cin,new_doctor.id);
@@ -57,6 +55,7 @@ void add_doctor()        //adding new doctor.
         doo<<"\n";
     }
     doo.close();         //close file after writing is done
-    cout<<"\t\tPress any key to proceed...";
+    cout << "\n\n\t\tNew Doctor information added!";
+    cout<<"\n\n\t\tPress any key to proceed...";
     cin.get();
 }

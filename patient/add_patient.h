@@ -8,7 +8,7 @@ int is_valid_gender(string s)
     {
         return 1;
     }
-    cout<<"\n\tInvalid Gender, press enter to Try Again..\n\n";
+    cout<<"\n\tInvalid Gender, press enter to Try Again..";
     return 0;
 }
 
@@ -50,21 +50,21 @@ string patient_id_generator()
 void add_patient()
 {
     read_patient();
+    system("CLS");
     patient new_patient;
     cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
-    cout<<"\t\t------------------------\n";
-    cin.ignore();
-    cout<<"\t\tID           : ";
+    cout<<"\t\t--------------------------\n";
+    cout<<"\t\t  ID               : ";
     new_patient.id = patient_id_generator();
     cout<<new_patient.id<<endl;
     cout<<endl;
-    cout<<"\t\tPatient Name : ";
+    cout<<"\t\t  Patient Name     : ";
     getline(cin,new_patient.name);
     cout<<endl;
-    cout<<"\t\tAge          : ";
+    cout<<"\t\t  Age              : ";
     getline(cin,new_patient.age);
     cout<<endl;
-    cout<<"\t\tGender(M/F)  : ";
+    cout<<"\t\t  Gender(M/F)      : ";
 
     while(getline(cin,new_patient.gender))
     {
@@ -80,20 +80,20 @@ void add_patient()
         cin.ignore();
         system("CLS");
         cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
-        cout<<"\t\t------------------------\n";
-        cout<<"\t\tID           : "<<new_patient.id<<endl;
+        cout<<"\t\t--------------------------\n";
+        cout<<"\t\t  ID               : "<<new_patient.id<<endl;
         cout<<endl;
-        cout<<"\t\tPatient Name : "<<new_patient.name<<endl;
+        cout<<"\t\t  Patient Name     : "<<new_patient.name<<endl;
         cout<<endl;
-        cout<<"\t\tAge          : "<<new_patient.age<<endl;
+        cout<<"\t\t  Age              : "<<new_patient.age<<endl;
         cout<<endl;
-        cout<<"\t\tGender(M/F)  : ";
+        cout<<"\t\t  Gender(M/F)      : ";
     }
     cout<<endl;
-    cout<<"\t\tMoblie No.   : ";
+    cout<<"\t\t  Moblie No.       : ";
     getline(cin,new_patient.mobile_no);
     cout<<endl;
-    cout<<"\t\tBlood Group  : ";
+    cout<<"\t\t  Blood Group      : ";
     while(getline(cin,new_patient.blood_group))
     {
         if(is_valid_Blood_Group(new_patient.blood_group))
@@ -107,21 +107,21 @@ void add_patient()
         cin.ignore();
         system("CLS");
         cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
-        cout<<"\t\t------------------------\n";
-        cout<<"\t\tID           : "<<new_patient.id<<endl;
+        cout<<"\t\t--------------------------\n";
+        cout<<"\t\t  ID               : "<<new_patient.id<<endl;
         cout<<endl;
-        cout<<"\t\tPatient Name : "<<new_patient.name<<endl;
+        cout<<"\t\t  Patient Name     : "<<new_patient.name<<endl;
         cout<<endl;
-        cout<<"\t\tAge          : "<<new_patient.age<<endl;
+        cout<<"\t\t  Age              : "<<new_patient.age<<endl;
         cout<<endl;
-        cout<<"\t\tGender(M/F)  : "<<new_patient.gender<<endl;
+        cout<<"\t\t  Gender(M/F)      : "<<new_patient.gender<<endl;
         cout<<endl;
-        cout<<"\t\tMoblie No.   : "<<new_patient.mobile_no<<endl;
+        cout<<"\t\t  Moblie No.       : "<<new_patient.mobile_no<<endl;
         cout<<endl;
-        cout<<"\t\tBlood Group  : ";
+        cout<<"\t\t  Blood Group      : ";
     }
     cout<<endl;
-    cout<<"\t\tPatient problem  : ";
+        cout<<"\t\t  Patient problem  : ";
     getline(cin,new_patient.reason);
     ofstream on("patient/patient.txt");
     int i=0;
@@ -146,9 +146,7 @@ void add_patient()
         on<<"\n";
     }
     on.close();
-    system("CLS");
-    cout<<"\n\tYour given information's are added. Thanks for your co-operation.\n\n";
-    system("CLS");
-    cout<<"Press any key to proceed...";
+    cout<<"\n\n\t\tYour given informations are added. Thanks for your co-operation.\n";
+    cout<<"\t\tPress any key to proceed...";
     cin.get();
 }

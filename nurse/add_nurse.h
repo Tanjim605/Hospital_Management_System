@@ -8,8 +8,8 @@ int is_valid(string bld_grp)
     if(!(bld_grp=="A+"||bld_grp=="B+"||bld_grp=="O+"||bld_grp=="AB+"||
         bld_grp=="A-"||bld_grp=="B-"||bld_grp=="AB-"||bld_grp=="O-"))
     {
-        cout<<"\n\tInvalid Blood Group Try Again..\n\n";
-        cout<<"Blood Group : ";
+        cout<<"\n\t\tInvalid Blood Group Try Again..\n\n";
+        cout<<"\t\t  Blood Group : ";
         f=0; 
         return f;
     }
@@ -37,18 +37,17 @@ string nurse_id_generator()
 void add_nurse()
 {
     read_nurse();
-    cin.ignore();
     nurse new_nurse;
-    cout<<"\n\nADDING NEW NURSE DETAILS\n";
-    cout<<"------------------------\n";
-    cout<<"ID          : ";
+    cout<<"\n\n\t\tADDING NEW NURSE DETAILS\n";
+    cout<<"\t\t------------------------\n";
+    cout<<"\n\t\t  ID          : ";
     new_nurse.id = nurse_id_generator();
     cout<<new_nurse.id<<endl;
-    cout<<"Nurse Name  : ";
+    cout<<"\n\t\t  Nurse Name  : ";
     getline(cin,new_nurse.name);
-    cout<<"Mobile No.  : ";
+    cout<<"\n\t\t  Mobile No.  : ";
     getline(cin,new_nurse.mobile_no);
-    cout<<"Blood Group : ";
+    cout<<"\n\t\t  Blood Group : ";
     while(getline(cin,new_nurse.blood_group))
     {
         if(is_valid(new_nurse.blood_group))
@@ -77,5 +76,7 @@ void add_nurse()
         no<<"\n";
     }
     no.close();
-    
+    cout << "\n\n\t\tNew nurse information added!";
+    cout << "\n\t\tPress Enter to escape...";
+    getchar();
 }
