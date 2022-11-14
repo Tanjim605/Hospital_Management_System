@@ -1,4 +1,3 @@
-int sp=0;
 void delete_doctor()         //deleting a person. We take the ID of the person and rewrite the txt file without that specific ID person
 {
     here:
@@ -9,11 +8,6 @@ void delete_doctor()         //deleting a person. We take the ID of the person a
     cout<<"\t\t------------------------\n";
     cout<<"\t\t  ID          : ";
     string ss;
-    if(!sp)
-    {
-        getline(cin,ss);
-        sp=1;
-    }
     getline(cin,del_id);                    //get the ID of the person who we want to delete
     ofstream doo("doctor/doctor.txt");             //opening file in write mode
     int i =0;
@@ -44,7 +38,7 @@ void delete_doctor()         //deleting a person. We take the ID of the person a
     }
     number_of_doctor--;         //total doctor number reduce by one as one doctor is deleted
     doo.close();
-    cout<<"\t\tDeleted successfully...\n\n";
+    cout<<"\n\n\t\tDeleted successfully...\n\n";
     cout<<"\t\tPress any key to proceed...";
     cin.get();             //write mode file close
 }

@@ -1,11 +1,11 @@
 void search_patient()
 {
     read_patient();
-    cin.ignore();
     here:
+    system("CLS");
     string idd;
     int flag=1;
-    cout<<"\n\n\t\tPlease give me the patient's ID : ";
+    cout<<"\n\n\t\tPlease enter patient's ID : ";
     getline(cin,idd);
     for(int i=0;i<number_of_patient;i++)
     {
@@ -26,9 +26,8 @@ void search_patient()
     if(flag)
     {
         cout << "\n\n\t\tSorry Patient not found! Please try again.";
-        system("CLS");
+        sleep(1);
         goto here;
-        // search_patient();
     }
     cout<<"\n\t\tPress any key to proceed...";
     cin.get();

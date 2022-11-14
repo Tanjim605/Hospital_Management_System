@@ -1,8 +1,7 @@
 void remove_patient()
 {
     read_patient();
-    string o,del_id;
-    getline(cin,o);
+    string del_id;
     int i=0,f=0;
     system("CLS");
     while(1)
@@ -23,8 +22,8 @@ void remove_patient()
         if(f==0)
         {
             system("CLS");
-            cout<<"\n\tInvalid ID, Please try again\n\n";
-            sleep(2);
+            cout<<"\n\n\t\tInvalid ID, Please try again\n\n";
+            sleep(1);
             system("CLS");
         }
         else break;
@@ -42,6 +41,7 @@ void remove_patient()
             inn<<pat[i].gender<<endl;
             inn<<pat[i].mobile_no<<endl;
             inn<<pat[i].blood_group<<endl;
+            inn<<pat[i].reason<<endl;
             inn<<"\n";
         }
         else if(del_id==pat[i].id)
@@ -51,9 +51,9 @@ void remove_patient()
         i++;
     }
     system("CLS");
-    cout<<"\n\tYour given information's are removed. Thanks for your co-operation.\n\n";
+    cout<<"\n\n\t\tYour given information is removed. Thanks for your co-operation.\n\n";
     number_of_patient--;
-    cout<<"\n\tPress any key to proceed...";
+    cout<<"\n\t\tPress any key to proceed...";
     cin.get();
     inn.close();
 

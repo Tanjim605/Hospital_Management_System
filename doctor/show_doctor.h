@@ -77,9 +77,7 @@ void show_doctor()               //presenting the nurse list in console
     }
     cout<<"\n\t\tPress any enter to proceed...";
     string enter;
-    getchar();
     getchar();//1st getchar is for the chosen option 2nd is for enter
-
 }
 
 

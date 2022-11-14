@@ -12,7 +12,7 @@ void admin_work()
              << "\t\t  2. Show-Admin\n"
              << "\t\t  3. Update-info\n"<<endl
              << "\t\tEnter 0 to escape..."<<endl;
-        cin>>cc;
+        getline(cin,cc);
         if (cc == "1")
         {
             system("CLS");
@@ -37,7 +37,6 @@ void admin_work()
         else
         {
             system("CLS");
-
             cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
             sleep(1);
         }

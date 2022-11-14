@@ -31,6 +31,7 @@ void first_line(int mx)
 
 void show_patient()               //presenting the nurse list in console
 {
+    system("CLS");
     read_patient();               //read the txt file first
     cout<<"Patient List : \n";
     cout<<"------------\n";
@@ -82,6 +83,5 @@ void show_patient()               //presenting the nurse list in console
     }
     cout<<"\n\t\tPress any enter to proceed...";
     string enter;
-    getchar();
     getchar();//1st getchar is for the chosen option 2nd is for enter
 }

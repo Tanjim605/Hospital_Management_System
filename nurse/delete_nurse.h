@@ -1,17 +1,13 @@
 int f=1;
 void delete_nurse()             //deleting a person. We take the ID of the person and rewrite the txt file without that specific ID person
 {
+    up:
     read_nurse();
+    system("CLS");
     string del_id;
-    cout<<"\nDELTETING NURSE DETAILS\n";
-    cout<<"-----------------------\n";
-    cout<<"ID          : ";
-    string s;
-    if(f)
-    {
-        getline(cin,s);                     //for ignoring 
-        f=0;
-    }
+    cout<<"\n\n\t\tDELTETING NURSE DETAILS\n";
+    cout<<"\t\t-----------------------\n";
+    cout<<"\t\t  ID          : ";
     getline(cin,del_id);                //get the ID of the person who we want to delete
     ofstream no("nurse/nurse.txt");           //opening file in write mode
     int i =0;
@@ -37,9 +33,13 @@ void delete_nurse()             //deleting a person. We take the ID of the perso
         cout<<"\t\tID not found...."<<endl
             <<"\t\tPlease try again.."<<endl;
         sleep(1);
-        system("CLS");
         no.close();  
-        delete_nurse();   
+        goto up;   
+    }
+    else
+    {
+        cout<<"\n\t\tDeleted Successfully!";
+        sleep(1);
     }
     number_of_nurse--;               //total nurse number reduce by one as one nurse is deleted
     no.close();                     //write mode file close

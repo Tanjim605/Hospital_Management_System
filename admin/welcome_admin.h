@@ -4,19 +4,19 @@ void welcome_admin()
 {
     check_admin();
     up:
-    int ch;
+    string ch;
     system("CLS");
-    cout << "\n\n\t\tChoose an Option: \n\n\t\t  1. Log in\n\t\t  0. Exit\n";
-    cin >> ch;
-    if (ch == 1)
+    cout << "\n\n\t\tChoose an Option: \n\n\t\t  1. Log in\n\t\t  0. Back\n";
+    getline(cin,ch);
+    if (ch == "1")
         login_admin();
-    else if(ch == 0)
+    else if(ch == "0")
         logout=1;
     else
     {
-        cout << "Invalid Input! Press Enter  to try again..."<<endl;
-        getchar();
-        getchar();
+        system("CLS");
+        cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
+        sleep(1);
         goto up;
     }
 }
