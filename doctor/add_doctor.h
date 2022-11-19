@@ -1,13 +1,13 @@
 string doctor_id_generator()
 {
-    ifstream ld("doctor/last_doctor.txt");
+    ifstream ld(last_doc);
     int last_doctor;
     ld >> last_doctor;
     string str;
     int new_id = 1000+last_doctor+1;
     ld.close();
     last_doctor++;
-    ofstream lsd("doctor/last_doctor.txt");
+    ofstream lsd(last_doc);
     lsd << last_doctor;
     lsd.close();
     str+='D';
@@ -36,7 +36,7 @@ void add_doctor()        //adding new doctor.
     cout<<"\t\t  Mobile No.     : ";
     getline(cin,new_doctor.mobile_no);
 
-    ofstream doo("doctor/doctor.txt");           //opening file in write mode to rewrite every doctor
+    ofstream doo(doc_file);           //opening file in write mode to rewrite every doctor
     int i =0;
     dr[number_of_doctor].id = new_doctor.id;             //setting new_doctor data in array varible
     dr[number_of_doctor].name = new_doctor.name;

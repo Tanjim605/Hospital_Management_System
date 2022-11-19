@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 #include<unistd.h>
-// #include"person.h"
 using namespace std;
 
 class doctor:public person
@@ -8,6 +7,9 @@ class doctor:public person
 public:
     string id,degree,college,spacialist;
 };
+
+string doc_file="doctor/doctor.txt";        //file declaration as string
+string last_doc="doctor/last_doctor.txt";
 
 char y;
 int mm=0;

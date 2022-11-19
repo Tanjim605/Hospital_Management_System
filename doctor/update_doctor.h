@@ -40,7 +40,7 @@ void update_doctor()
         sleep(1);
         goto heree;
     }
-    ofstream on("doctor/doctor.txt");
+    ofstream on(doc_file);
     int i=0;
     while(i<number_of_doctor)
     {

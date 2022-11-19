@@ -30,7 +30,7 @@ void remove_patient()
     }
     f=0;
     i=0;
-    ofstream inn("patient/patient.txt");
+    ofstream inn(patient_file);
     while(i<number_of_patient)
     {
         if(del_id!=pat[i].id)
@@ -58,4 +58,3 @@ void remove_patient()
     inn.close();
 
 }
-

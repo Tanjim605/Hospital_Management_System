@@ -1,6 +1,6 @@
 void read_patient()
 {
-     ifstream in("patient/patient.txt");
+     ifstream in(patient_file);
      int i=0;
      string s;
      while(getline(in,pat[i].id))
@@ -16,4 +16,3 @@ void read_patient()
      }
      number_of_patient=i;
 }
-

@@ -1,6 +1,6 @@
 void read_admin()
 {
-    ifstream ni("admin/login.txt");
+    ifstream ni(admin_file);
     string ID, PASS;
     n = 0;
     for (int i = 0; getline(ni, ID); i++)
