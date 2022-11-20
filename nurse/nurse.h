@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 #include<unistd.h>          // Header file for sleep function
-// #include "person.h"         // including person class
 using namespace std;
 
 class nurse:public person   //inherited nurse class from person
@@ -8,6 +7,9 @@ class nurse:public person   //inherited nurse class from person
     public:
     string id,blood_group;
 };
+
+string nurse_file="nurse/nurse.txt";        //file declaration as string
+string last_nurse_file="nurse/last_nurse.txt";
 
 int nn=0;
 nurse nrs[100];             //nurse array

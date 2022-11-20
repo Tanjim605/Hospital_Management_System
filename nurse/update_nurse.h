@@ -22,7 +22,7 @@ void update_nurse()
         cout<<"\n\n\t\t  Please enter the patient's ID you want to change : ";
         sleep(1);
         getline(cin,idd);
-        ofstream on("nurse/nurse.txt");
+        ofstream on(nurse_file);
         for(int i=0;i<number_of_nurse;i++)
         {
             if(nrs[i].id==idd)

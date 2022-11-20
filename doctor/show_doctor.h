@@ -79,17 +79,3 @@ void show_doctor()               //presenting the nurse list in console
     string enter;
     getchar();//1st getchar is for the chosen option 2nd is for enter
 }
-
-
-
-//while(i<number_of_doctor)
-//{
-//  //please check this line   ↓   this colon should be in line **********
-//    cout<<"\t\t  ID          : "<<dr[i].id<<endl;
-//    cout<<"\t\t  Name        : "<<dr[i].name<<endl;
-//    cout<<"\t\t  Degree      : "<<dr[i].degree<<endl;
-//    cout<<"\t\t  College     : "<<dr[i].college<<endl;
-//    cout<<"\t\t  Mobile NO.  : "<<dr[i].mobile_no<<endl;
-//    i++;
-//    cout<<"\n"<<endl;
-//}

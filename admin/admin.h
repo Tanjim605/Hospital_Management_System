@@ -21,6 +21,8 @@ public:
     }
 };
 
+string admin_file="admin/login.txt";
+
 login admin[1000];
 int n = 0, m,logout=0,back=0; // m is the position of given id while logging in
 

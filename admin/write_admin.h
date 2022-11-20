@@ -1,6 +1,6 @@
 void write_admin()
 {
-    ofstream no("admin/login.txt");
+    ofstream no(admin_file);
     for (int i = 0; i < n; i++)
         no << admin[i].id << endl
            << admin[i].get_pass() << endl;

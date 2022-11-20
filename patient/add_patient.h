@@ -31,14 +31,14 @@ int is_valid_Blood_Group(string bld_grp)
 
 string patient_id_generator()
 {
-    ifstream lp("patient/last_patient.txt");
+    ifstream lp(last_patient_file);
     int last_patient;
     lp >> last_patient;
     string str;
     int new_id = 1000+last_patient+1;
     lp.close();
     last_patient++;
-    ofstream lsp("patient/last_patient.txt");
+    ofstream lsp(last_patient_file);
     lsp << last_patient;
     lsp.close();
     str+='P';
@@ -123,7 +123,7 @@ void add_patient()
     cout<<endl;
         cout<<"\t\t  Patient problem  : ";
     getline(cin,new_patient.reason);
-    ofstream on("patient/patient.txt");
+    ofstream on(patient_file);
     int i=0;
     pat[number_of_patient].id = new_patient.id;
     pat[number_of_patient].name = new_patient.name;

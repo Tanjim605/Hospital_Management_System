@@ -53,7 +53,7 @@ void update_patient()
             sleep(1);
             goto op;
         }
-        ofstream on("patient/patient.txt");
+        ofstream on(patient_file);
         int i=0,ff=0;
         while(i<number_of_patient)
         {

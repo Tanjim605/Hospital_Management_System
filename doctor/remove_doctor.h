@@ -9,7 +9,7 @@ void delete_doctor()         //deleting a person. We take the ID of the person a
     cout<<"\t\t  ID          : ";
     string ss;
     getline(cin,del_id);                    //get the ID of the person who we want to delete
-    ofstream doo("doctor/doctor.txt");             //opening file in write mode
+    ofstream doo(doc_file);             //opening file in write mode
     int i =0;
     bool found = 0;
     while(i<number_of_doctor)
