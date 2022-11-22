@@ -18,13 +18,13 @@ void add_admin()
         }
         if (sz(nid) < 6)
         {
-            cout << "\t\tUSER have to be more than 5 characters. Press ENTER to try again!";
-            getchar();
+            cout << "\t\tUSER have to be more than 5 characters. Press any key to try again!";
+            ENT=getch();
         }
         else if (f)
         {
-            cout << "\t\tThis USER is already taken. Press ENTER to try again!";
-            getchar();
+            cout << "\t\tThis USER is already taken. Press any key to try again!";
+            ENT=getch();
         }
         else
             break;
@@ -40,8 +40,8 @@ void add_admin()
         getline(cin, npass);
         if (sz(npass) < 6)
         {
-            cout << "\t\tPASS have to be more than 5 characters. Press ENTER to try again!";
-            getchar();
+            cout << "\t\tPASS have to be more than 5 characters. Press any key to try again!";
+            ENT=getch();
         }
         else
         {
@@ -59,7 +59,7 @@ void add_admin()
                 if(cps!=npass)
                 {
                     cout << "\t\tYour password didn't matched." << endl
-                         << "\t\tPress enter to try again!";
+                         << "\t\tPress any key to try again!";
                     getch(); 
                 }
                 else    
@@ -68,8 +68,8 @@ void add_admin()
             
             cout << endl
                  << "\t\tNew Admin added!" << endl;
-            cout << "\t\tPress ENTER";
-            getchar();
+            cout << "\t\tPress any key to proceed!";
+            ENT=getch();
             system("CLS");
             break;
         }

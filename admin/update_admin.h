@@ -45,9 +45,15 @@ void update_admin()
                 system("CLS");
                 cout << "\t\tEnter a new USER : " << uid << endl << endl;
                 cout << "\t\tEnter your current Password to confirm : ";
-                for(int i=0; i<sz(admin[m].get_pass()); i++)
+                for(int i=0; ; i++)
                 {
-                    pass+=getch();
+                    char h=getch();
+                    if(h==13)
+                        break;
+                    else if(h==8)
+                        pass.pop_back();
+                    else
+                        pass+=h;
                     system("CLS");
                     cout << "\t\tEnter a new USER : " << uid << endl << endl;
                     cout << "\t\tEnter your current Password to confirm : ";
@@ -119,9 +125,15 @@ void update_admin()
                 system("CLS");
                 cout << "\t\tEnter a new Password : " << upass << endl << endl;
                 cout << "\t\tEnter your current Password to confirm : ";
-                for(int i=0; i<sz(admin[m].get_pass()); i++)
+                for(int i=0; ; i++)
                 {
-                    pass+=getch();
+                    char h=getch();
+                    if(h==13)
+                        break;
+                    else if(h==8)
+                        pass.pop_back();
+                    else
+                        pass+=h;
                     system("CLS");
                     cout << "\t\tEnter a new Password : " << upass << endl << endl;
                     cout << "\t\tEnter your current Password to confirm : ";

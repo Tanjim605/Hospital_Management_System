@@ -32,9 +32,15 @@ void login_admin()
         system("CLS");
         cout << "\n\n\t\tUSER         : " << admin[m].id << endl;
         cout << "\t\tENTER PASS   : ";
-        for(int i=0; i<sz(admin[m].get_pass()); i++)
+        for(int i=0; ; i++)
         {
-            pass+=getch();
+            char h=getch();
+            if(h==13)
+                break;
+            else if(h==8)
+                pass.pop_back();
+            else
+                pass+=h;
             system("CLS");
             cout << "\n\n\t\tUSER         : " << admin[m].id << endl;
             cout << "\t\tENTER PASS   : ";
