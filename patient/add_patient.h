@@ -148,5 +148,5 @@ void add_patient()
     on.close();
     cout<<"\n\n\t\tYour given informations are added. Thanks for your co-operation.\n";
     cout<<"\t\tPress any key to proceed...";
-    cin.get();
+    pat_ent=getch();
 }

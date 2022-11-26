@@ -72,7 +72,7 @@ void update_patient()
         on.close();
         if(ff){
             cout<<"\t\tPress any key to proceed...";
-            cin.get();
+            pat_ent=getch();
             ff=0;
         }
     }
