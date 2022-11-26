@@ -13,7 +13,7 @@ string last_patient_file="patient/last_patient.txt";
 
 int number_of_patient=0;
 patient pat[100];
-char x;
+char x,pat_ent;
 int nm=0;
 int r=0;
 

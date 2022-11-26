@@ -57,5 +57,5 @@ void add_doctor()        //adding new doctor.
     doo.close();         //close file after writing is done
     cout << "\n\n\t\tNew Doctor information added!";
     cout<<"\n\n\t\tPress any key to proceed...";
-    cin.get();
+    doc_ent=getch();
 }

@@ -37,8 +37,8 @@ void delete_doctor()         //deleting a person. We take the ID of the person a
         goto here;
     }
     number_of_doctor--;         //total doctor number reduce by one as one doctor is deleted
-    doo.close();
+    doo.close();                //write mode file close
     cout<<"\n\n\t\tDeleted successfully...\n\n";
     cout<<"\t\tPress any key to proceed...";
-    cin.get();             //write mode file close
+    doc_ent=getch();      
 }

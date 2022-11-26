@@ -10,7 +10,6 @@ void read_nurse()            //reading from nurse.txt file. *** Mendatory for sa
         getline(ni,nrs[i].blood_group);
         i++;
         getline(ni,ch);
-        // cin.ignore();
     }
     number_of_nurse=i;          //total number of nurse is equal to i
 }

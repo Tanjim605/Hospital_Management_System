@@ -82,6 +82,8 @@ void show_patient()               //presenting the nurse list in console
         i++;
     }
     cout<<"\n\t\tPress any enter to proceed...";
-    string enter;
-    getchar();//1st getchar is for the chosen option 2nd is for enter
+    pat_ent=getch();
+
+    // string enter;
+    // getchar();//1st getchar is for the chosen option 2nd is for enter
 }

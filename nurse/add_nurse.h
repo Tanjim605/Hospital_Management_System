@@ -77,6 +77,6 @@ void add_nurse()
     }
     no.close();
     cout << "\n\n\t\tNew nurse information added!";
-    cout << "\n\t\tPress Enter to escape...";
-    getchar();
+    cout << "\n\t\tPress any key to proceed...";
+    nur_ent=getch();
 }

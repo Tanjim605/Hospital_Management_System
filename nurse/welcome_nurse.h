@@ -1,4 +1,3 @@
-
 #include "nurse.h"
 
 void welcome_nurse()
@@ -32,7 +31,7 @@ void welcome_nurse()
         {
             nurse_list();
             cout<<"\nPress any key...";
-            cin.ignore();
+            nur_ent=getch();
         }
         else
         {

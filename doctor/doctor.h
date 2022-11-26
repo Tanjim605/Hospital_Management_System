@@ -11,7 +11,7 @@ public:
 string doc_file="doctor/doctor.txt";        //file declaration as string
 string last_doc="doctor/last_doctor.txt";
 
-char y;
+char y,doc_ent;
 int mm=0;
 doctor dr[100];
 int number_of_doctor=0;      //gobal declaretion of total_doctor as we need everytime

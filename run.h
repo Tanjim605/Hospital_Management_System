@@ -67,31 +67,44 @@ int run()
         }
     }
 
-    else if(user=="2") //patient website e eshe ja dekhbe
+    else if(user=="2")  //doctor login korar por
+    {
+        //login er kaj baki @arif
+        while(1)
+        {
+            system("CLS");
+            cout<<"\n\n\t\t*Welcome to our Hospital*"<<endl
+                <<"\t\t-------------------------"<<endl<<endl
+                <<"\t\t  1. View Profile" <<endl
+                <<"\t\t  2. Patient list" <<endl;
+            string choice;
+            getline(cin,choice);
+            system("CLS");
+        }
+    }
+
+    else if(user=="3") //patient website e eshe ja dekhbe
     {
         while(1)
         {
             system("CLS");
             cout<<"\n\n\t\t*Welcome to our Hospital*"<<endl
                 <<"\t\t-------------------------"<<endl<<endl
-                << "\t\t  1. Get Admitted" << endl
-                << "\t\t  2. Doctor List" << endl
-                << "\t\t  3. Search Paitent" << endl
-                << "\t\t  4. Exit" << endl;
+                << "\t\t  1. Doctor List" << endl
+                << "\t\t  2. Search Paitent" << endl
+                << "\t\t  3. Exit" << endl;
             string choice;
             getline(cin,choice);
             system("CLS");
 
-            if(choice=="1")
-                add_patient();
-            else if(choice == "2")
+            if(choice == "1")
                 show_doctor();
-            else if(choice=="3")
+            else if(choice=="2")
             {
                 system("CLS");
                 search_patient();
             }
-            else if(choice == "4")
+            else if(choice == "3")
             {
                 system("CLS");
                 goto abar;
@@ -104,4 +117,6 @@ int run()
             }
         }
     }
+
+    
 }

@@ -30,5 +30,5 @@ void search_patient()
         goto here;
     }
     cout<<"\n\t\tPress any key to proceed...";
-    cin.get();
+    pat_ent=getch();
 }

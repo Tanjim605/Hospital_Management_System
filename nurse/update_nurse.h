@@ -19,7 +19,7 @@ void update_nurse()
         here:
         system("CLS");
         int flag=1;
-        cout<<"\n\n\t\t  Please enter the patient's ID you want to change : ";
+        cout<<"\n\n\t\t  Please enter the nurse's ID you want to change : ";
         sleep(1);
         getline(cin,idd);
         ofstream on(nurse_file);

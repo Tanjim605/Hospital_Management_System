@@ -54,7 +54,7 @@ void remove_patient()
     cout<<"\n\n\t\tYour given information is removed. Thanks for your co-operation.\n\n";
     number_of_patient--;
     cout<<"\n\t\tPress any key to proceed...";
-    cin.get();
+    pat_ent=getch();
+    
     inn.close();
-
 }

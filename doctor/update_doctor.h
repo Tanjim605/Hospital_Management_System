@@ -55,5 +55,5 @@ void update_doctor()
 
     on.close();
     cout<<"\t\tPress any key to proceed...";
-    cin.get();
+    doc_ent=getch();
 }
