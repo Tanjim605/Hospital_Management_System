@@ -121,8 +121,10 @@ void add_patient()
         cout<<"\t\t  Blood Group      : ";
     }
     cout<<endl;
-        cout<<"\t\t  Patient problem  : ";
+    cout<<"\t\t  Patient problem  : ";
     getline(cin,new_patient.reason);
+    cout<<endl;
+    select_doctor();
     ofstream on(patient_file);
     int i=0;
     pat[number_of_patient].id = new_patient.id;
