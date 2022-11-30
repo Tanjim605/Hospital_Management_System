@@ -2,6 +2,7 @@ string str[4] ={"ID","NAME","MOBILE NO.","BLOOD GROUP"};
 
 void row_line(int a)
 {
+    cout<<"\t\t  ";
     for(int i=0;i<a+5;i++)
         cout<<"-";
     cout<<endl;
@@ -18,6 +19,7 @@ void info_line(string a,int len)
 
 void firstline(int mx)
 {
+    cout<<"\t\t  ";
     for(int i=0;i<4;i++)
     {
         cout<<"| "<<str[i];
@@ -32,8 +34,8 @@ void firstline(int mx)
 void nurse_list()               //presenting the nurse list in console
 {
     read_nurse();               //read the txt file first
-    cout<<"Nurse List : \n";
-    cout<<"------------\n";
+    cout<<"\n\n\t\t  Nurse List : \n";
+    cout<<"\t\t  ------------\n";
     int mx_size = 0;
     int i = 0;
     while(i<number_of_nurse)
@@ -45,13 +47,14 @@ void nurse_list()               //presenting the nurse list in console
         i++;
     }
     mx_size = max(mx_size,11);
-    mx_size++;
+    mx_size+=2;
     row_line(mx_size*4);
     firstline(mx_size);
     row_line(mx_size*4);
     i = 0;
     while(i<number_of_nurse)
     {
+        cout<<"\t\t  ";
         info_line(nrs[i].id,mx_size);
         info_line(nrs[i].name,mx_size);
         info_line(nrs[i].mobile_no,mx_size);
@@ -59,15 +62,6 @@ void nurse_list()               //presenting the nurse list in console
         cout<<"|"<<endl;
         row_line(mx_size*4);
         i++;
-    }
-    while(i<number_of_nurse)
-    {
-        cout<<"\tID          : "<<nrs[i].id<<endl;
-        cout<<"\tName        : "<<nrs[i].name<<endl;
-        cout<<"\tMobile NO.  : "<<nrs[i].mobile_no<<endl;
-        cout<<"\tBlood Group : "<<nrs[i].blood_group<<endl;
-        i++;
-        cout<<"\n"<<endl;
     }
     
 }
