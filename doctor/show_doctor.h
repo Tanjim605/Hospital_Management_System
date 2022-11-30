@@ -78,8 +78,6 @@ void show_doctor()               //presenting the nurse list in console
         row_lin(mx_size*5);
         i++;
     }
-    cout<<"\n\t\tPress any key to proceed...";
-    doc_ent=getch();
     string enter;
     // getchar();//1st getchar is for the chosen option 2nd is for enter
 }

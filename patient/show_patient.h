@@ -1,4 +1,4 @@
-string st[7] ={"ID","NAME","MOBILE NO.","AGE","GENDER","BLOOD GROUP","PATIENT PROBLEM"};
+string st[7] ={"ID","NAME","AGE","GENDER","MOBILE NO.","BLOOD GROUP","PATIENT PROBLEM"};
 
 void rowline(int a)
 {

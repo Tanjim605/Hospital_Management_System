@@ -5,6 +5,7 @@ M
 0000000000
 O+
 Heart Problem
+D1001
 
 P1002
 Takiba Islam
@@ -13,6 +14,7 @@ F
 01841231237
 A+
 Eye problem
+D1001
 
 P1003
 Tanjima Begum
@@ -20,37 +22,33 @@ Tanjima Begum
 F
 01884055563
 O+
-urine infection
+Urine Infection
+D1002
 
 P1004
-ok
-50
-M
-001212121
-O+
-severe fever
-
-P1005
-sakib
+Sakib Ahmed
 45
 M
 0123456789
 O+
 Gastric
+D1003
 
-P1006
-yousuf khan
-72
-M
-01816724882
-O-
-kichu nai
-
-P1007
-tanjim
+P1005
+Rayan Kuddus 
 29
 M
 0125632156
 A+
-mental problem
+Mental Problem
+D1004
+
+P1006
+Tanjimul Islam
+22
+M
+01846108023
+A+
+Fever
+D1005
 

@@ -5,8 +5,8 @@ int is_valid(string bld_grp)
         bld_grp[i] = toupper(bld_grp[i]);
     }
     int f=1;
-    if(!(bld_grp=="A+"||bld_grp=="B+"||bld_grp=="O+"||bld_grp=="AB+"||
-        bld_grp=="A-"||bld_grp=="B-"||bld_grp=="AB-"||bld_grp=="O-"))
+    if(!(bld_grp=="A+" or bld_grp=="B+" or bld_grp=="O+" or bld_grp=="AB+" or 
+        bld_grp=="A-" or bld_grp=="B-" or bld_grp=="AB-" or bld_grp=="O-"))
     {
         cout<<"\n\t\tInvalid Blood Group Try Again..\n\n";
         cout<<"\t\t  Blood Group : ";
