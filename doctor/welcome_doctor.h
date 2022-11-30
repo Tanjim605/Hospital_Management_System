@@ -26,7 +26,11 @@ void welcome_doctor()
         else if(option == "3")
             update_doctor();
         else if(option == "4")
+        {
             show_doctor();
+            cout<<"\n\t\tPress any key to proceed...";
+            doc_ent=getch();
+        }
         else
         {
             system("CLS");

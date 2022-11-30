@@ -4,7 +4,7 @@ int is_valid_gender(string s)
     {
         s[i]=toupper(s[i]);
     }
-    if(s=="M" || s=="F")
+    if(s=="M" or s=="F")
     {
         return 1;
     }
@@ -19,8 +19,8 @@ int is_valid_Blood_Group(string bld_grp)
         bld_grp[i] = toupper(bld_grp[i]);
     }
     int f=1;
-    if(!(bld_grp=="A+"||bld_grp=="B+"||bld_grp=="O+"||bld_grp=="AB+"||
-        bld_grp=="A-"||bld_grp=="B-"||bld_grp=="AB-"||bld_grp=="O-"))
+    if(!(bld_grp=="A+" or bld_grp=="B+" or bld_grp=="O+" or bld_grp=="AB+" or 
+        bld_grp=="A-" or bld_grp=="B-" or bld_grp=="AB-" or bld_grp=="O-"))
     {
         cout<<"\n\tInvalid Blood Group, press enter to Try Again..\n\n";
         f=0;
@@ -71,10 +71,6 @@ void add_patient()
         if(is_valid_gender(new_patient.gender))
         {
             new_patient.gender[0]=toupper(new_patient.gender[0]);
-//            for(int i=1;i<new_patient.gender.length();i++)
-//            {
-//                new_patient.gender[i] = tolower(new_patient.gender[i]);
-//            }
             break;
         }
         cin.ignore();
@@ -124,6 +120,11 @@ void add_patient()
     cout<<"\t\t  Patient problem  : ";
     getline(cin,new_patient.reason);
     cout<<endl;
+    cout<<"\t\t  Choose Doctor    : ";
+    cout<<endl;
+    show_doctor();
+    getline(cin,new_patient.doc);
+    cout<<endl;
     // select_doctor();
     ofstream on(patient_file);
     int i=0;
@@ -134,6 +135,7 @@ void add_patient()
     pat[number_of_patient].mobile_no = new_patient.mobile_no;
     pat[number_of_patient].blood_group = new_patient.blood_group;
     pat[number_of_patient].reason = new_patient.reason;
+    pat[number_of_patient].doc = new_patient.doc;
     number_of_patient++;
     while(i<number_of_patient)
     {
@@ -144,6 +146,7 @@ void add_patient()
         on<<pat[i].mobile_no<<endl;
         on<<pat[i].blood_group<<endl;
         on<<pat[i].reason<<endl;
+        on<<pat[i].doc<<endl;
         i++;
         on<<"\n";
     }

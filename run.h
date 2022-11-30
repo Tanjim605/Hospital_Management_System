@@ -98,7 +98,11 @@ int run()
             system("CLS");
 
             if(choice == "1")
+            {
                 show_doctor();
+                cout<<"\n\t\tPress any key to proceed...";
+                doc_ent=getch();
+            }
             else if(choice=="2")
             {
                 system("CLS");

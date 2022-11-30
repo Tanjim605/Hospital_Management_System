@@ -11,6 +11,7 @@ void read_patient()
         getline(in, pat[i].mobile_no);
         getline(in, pat[i].blood_group);
         getline(in, pat[i].reason);
+        getline(in, pat[i].doc);
         i++;
         getline(in, s);
     }

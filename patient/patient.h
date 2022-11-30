@@ -6,6 +6,7 @@ class patient:public person
 {
     public:
     string id,blood_group,age,gender,reason;
+    string doc;
 };
 
 string patient_file="patient/patient.txt";
