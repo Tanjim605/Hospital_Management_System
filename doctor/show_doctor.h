@@ -2,7 +2,8 @@ string tr[5] ={"ID","NAME","DEGREE","COLLEGE","MOBILE NO."};
 
 void row_lin(int a)
 {
-    for(int i=0;i<a+5;i++)
+    cout<<"\t\t  ";
+    for(int i=0;i<a+6;i++)
         cout<<"-";
     cout<<endl;
 }
@@ -18,6 +19,7 @@ void info_lin(string a,int len)
 
 void firstlin(int mx)
 {
+    cout<<"\t\t  ";
     for(int i=0;i<5;i++)
     {
         cout<<"| "<<tr[i];
@@ -32,8 +34,8 @@ void firstlin(int mx)
 void show_doctor()               //presenting the nurse list in console
 {
     read_doctor();               //read the txt file first
-    cout<<"Doctor List : \n";
-    cout<<"------------\n";
+    cout<<"\n\n\t\t  Doctor List : \n";
+    cout<<"\t\t  ------------\n";
     int length[5]={0};
     for(int j=0;j<5;j++)
     {
@@ -59,13 +61,14 @@ void show_doctor()               //presenting the nurse list in console
         len_row+=max(length[i],(int)tr[i].length());
     sort(length,length+5);
     int mx_size = length[4];
-    mx_size++;
+    mx_size+=2;
     row_lin(mx_size*5);
     firstlin(mx_size);
     row_lin(mx_size*5);
     int i = 0;
     while(i<number_of_doctor)
     {
+        cout<<"\t\t  ";
         info_lin(dr[i].id,mx_size);
         info_lin(dr[i].name,mx_size);
         info_lin(dr[i].degree,mx_size);

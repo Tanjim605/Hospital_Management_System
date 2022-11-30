@@ -2,7 +2,8 @@ string st[7] ={"ID","NAME","MOBILE NO.","AGE","GENDER","BLOOD GROUP","PATIENT PR
 
 void rowline(int a)
 {
-    for(int i=0;i<a+6;i++)
+    cout<<"\t\t  ";
+    for(int i=0;i<a+8;i++)
         cout<<"-";
     cout<<endl;
 }
@@ -18,6 +19,7 @@ void infoline(string a,int len)
 
 void first_line(int mx)
 {
+    cout<<"\t\t  ";
     for(int i=0;i<7;i++)
     {
         cout<<"| "<<st[i];
@@ -33,8 +35,8 @@ void show_patient()               //presenting the nurse list in console
 {
     system("CLS");
     read_patient();               //read the txt file first
-    cout<<"Patient List : \n";
-    cout<<"------------\n";
+    cout<<"\n\n\t\t  Patient List : \n";
+    cout<<"\t\t  ------------\n";
     int length[7]={0};
     for(int j=0;j<7;j++)
     {
@@ -63,13 +65,14 @@ void show_patient()               //presenting the nurse list in console
         len_row+=max(length[i],(int)st[i].length());
     sort(length,length+7);
     int mx_size = length[6];
-    mx_size++;
+    mx_size+=2;
     rowline(mx_size*7);
     first_line(mx_size);
     rowline(mx_size*7);
     int i = 0;
     while(i<number_of_patient)
     {
+        cout<<"\t\t  ";
         infoline(pat[i].id,mx_size);
         infoline(pat[i].name,mx_size);
         infoline(pat[i].age,mx_size);
@@ -81,7 +84,7 @@ void show_patient()               //presenting the nurse list in console
         rowline(mx_size*7);
         i++;
     }
-    cout<<"\n\t\tPress any enter to proceed...";
+    cout<<"\n\t\tPress any key to proceed...";
     pat_ent=getch();
 
     // string enter;
