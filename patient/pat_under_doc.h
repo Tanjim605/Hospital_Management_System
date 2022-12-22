@@ -72,12 +72,12 @@ void pat_under_doc(string find_doc_id)
     rowline_pud(mx_size*7);
 
 
-    
+    int total_pat_under_me=0;
     for(int i=0;i<number_of_patient;i++)
     {
         if(pat[i].doc==find_doc_id)
         {
-
+            total_pat_under_me++;
             cout<<"\t\t  ";
             infoline_pud(pat[i].id,mx_size);
             infoline_pud(pat[i].name,mx_size);
@@ -90,6 +90,7 @@ void pat_under_doc(string find_doc_id)
             rowline_pud(mx_size*7);
         }
     }
-    cout<<"\n\t\tPress any key to proceed...";
+    cout<<"\n\t\t  Total patient under you : "<<total_pat_under_me<<endl;
+    cout<<"\n\n\t\tPress any key to proceed...";
     doc_ent=getch();
 }

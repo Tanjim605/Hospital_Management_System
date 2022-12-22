@@ -46,7 +46,7 @@ M
 A+
 Fever
 D1005
-106
+105
 
 P1008
 Khaled Kashem
@@ -56,25 +56,5 @@ M
 AB+
 Heart
 D1001
-108
-
-P1020
-khahaha
-121
-M
-21214154
-A+
-jajaja
-D1002
-107
-
-P1009
-ryan
-66
-M
-015415151
-O+
-nai
-D1002
-105
+106
 

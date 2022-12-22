@@ -29,8 +29,8 @@ void login_doctor()
     while (1)
     {
         system("CLS");
-        cout << "\n\n\t\tYour ID  : " << dr[log_doc].id << endl;
-        cout << "\t\tENTER PASS   : ";
+        cout << "\n\n\t\tYour ID         : " << dr[log_doc].id << endl;
+        cout << "\t\tENTER PASS      : ";
         for(int i=0; ; i++)
         {
             char h=getch();
@@ -41,8 +41,8 @@ void login_doctor()
             else
                 pass+=h;
             system("CLS");
-            cout << "\n\n\t\tYour ID  : " << dr[log_doc].id << endl;
-            cout << "\t\tENTER PASS   : ";
+            cout << "\n\n\t\tYour ID         : " << dr[log_doc].id << endl;
+            cout << "\t\tENTER PASS      : ";
             for(int i=0; i<sz(pass); i++)
                 cout<<"*";
         }
@@ -56,7 +56,7 @@ void login_doctor()
         else
         {
             system("CLS");
-            cout << "\n\n\t\tYour ID  : " << dr[log_doc].id << endl;
+            cout << "\n\n\t\tYour ID      : " << dr[log_doc].id << endl;
             cout << "\t\tENTER PASS   : ";
             for(int i=0; i<sz(pass); i++)
                 cout<<"*";
