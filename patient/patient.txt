@@ -6,6 +6,7 @@ M
 O+
 Heart Problem
 D1001
+101
 
 P1002
 Takiba Islam
@@ -15,6 +16,7 @@ F
 A+
 Eye problem
 D1001
+102
 
 P1003
 Tanjima Begum
@@ -24,6 +26,7 @@ F
 O+
 Urine Infection
 D1002
+103
 
 P1004
 Sakib Ahmed
@@ -33,15 +36,7 @@ M
 O+
 Gastric
 D1003
-
-P1005
-Rayan Kuddus 
-29
-M
-01556321564
-A+
-Mental Problem
-D1004
+104
 
 P1006
 Tanjimul Islam
@@ -51,6 +46,7 @@ M
 A+
 Fever
 D1005
+106
 
 P1008
 Khaled Kashem
@@ -60,4 +56,25 @@ M
 AB+
 Heart
 D1001
+108
+
+P1020
+khahaha
+121
+M
+21214154
+A+
+jajaja
+D1002
+107
+
+P1009
+ryan
+66
+M
+015415151
+O+
+nai
+D1002
+105
 

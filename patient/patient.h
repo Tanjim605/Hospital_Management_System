@@ -6,11 +6,12 @@ class patient:public person
 {
     public:
     string id,blood_group,age,gender,reason;
-    string doc;
+    string doc,room;
 };
 
 string patient_file="patient/patient.txt";
 string last_patient_file="patient/last_patient.txt";
+vector<string> hos_room;
 
 int number_of_patient=0;
 patient pat[100];
@@ -18,8 +19,9 @@ char x,pat_ent;
 int nm=0;
 int r=0;
 
-
 #include "read_patient.h"
+#include "read_room.h"
+#include "get_room.h"
 #include "add_patient.h"
 #include "remove_patient.h"
 #include "search_patient.h"

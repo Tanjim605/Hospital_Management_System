@@ -43,6 +43,7 @@ void remove_patient()
             inn<<pat[i].blood_group<<endl;
             inn<<pat[i].reason<<endl;
             inn<<pat[i].doc<<endl;
+            inn<<pat[i].room<<endl;
             inn<<"\n";
         }
         else if(del_id==pat[i].id)
@@ -56,6 +57,6 @@ void remove_patient()
     number_of_patient--;
     cout<<"\n\t\tPress any key to proceed...";
     pat_ent=getch();
-    
+
     inn.close();
 }

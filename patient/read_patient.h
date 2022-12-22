@@ -12,6 +12,7 @@ void read_patient()
         getline(in, pat[i].blood_group);
         getline(in, pat[i].reason);
         getline(in, pat[i].doc);
+        getline(in, pat[i].room);
         i++;
         getline(in, s);
     }

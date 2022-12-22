@@ -65,6 +65,7 @@ void update_patient()
             on<<pat[i].blood_group<<endl;
             on<<pat[i].reason<<endl;
             on<<pat[i].doc<<endl;
+            on<<pat[i].room<<endl;
             i++;
             on<<"\n";
             f=1;

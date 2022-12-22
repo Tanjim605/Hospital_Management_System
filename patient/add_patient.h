@@ -19,7 +19,7 @@ int is_valid_Blood_Group(string bld_grp)
         bld_grp[i] = toupper(bld_grp[i]);
     }
     int f=1;
-    if(!(bld_grp=="A+" or bld_grp=="B+" or bld_grp=="O+" or bld_grp=="AB+" or 
+    if(!(bld_grp=="A+" or bld_grp=="B+" or bld_grp=="O+" or bld_grp=="AB+" or
         bld_grp=="A-" or bld_grp=="B-" or bld_grp=="AB-" or bld_grp=="O-"))
     {
         cout<<"\n\tInvalid Blood Group, press enter to Try Again..\n\n";
@@ -119,7 +119,7 @@ void add_patient()
     cout<<endl;
     cout<<"\t\t  Patient problem  : ";
     getline(cin,new_patient.reason);
-    
+
 
     try_again:
 
@@ -165,10 +165,11 @@ void add_patient()
 
         goto try_again;
     }
-
+    new_patient.room = get_room();
     // select_doctor();
-    ofstream on(patient_file);
-    int i=0;
+
+
+
     pat[number_of_patient].id = new_patient.id;
     pat[number_of_patient].name = new_patient.name;
     pat[number_of_patient].age = new_patient.age;
@@ -177,7 +178,10 @@ void add_patient()
     pat[number_of_patient].blood_group = new_patient.blood_group;
     pat[number_of_patient].reason = new_patient.reason;
     pat[number_of_patient].doc = new_patient.doc;
+    pat[number_of_patient].room = new_patient.room;
     number_of_patient++;
+    ofstream on(patient_file);
+    int i=0;
     while(i<number_of_patient)
     {
         on<<pat[i].id<<endl;
@@ -188,6 +192,7 @@ void add_patient()
         on<<pat[i].blood_group<<endl;
         on<<pat[i].reason<<endl;
         on<<pat[i].doc<<endl;
+        on<<pat[i].room<<endl;
         i++;
         on<<"\n";
     }
