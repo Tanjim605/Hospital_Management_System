@@ -78,6 +78,6 @@ void show_doctor()               //presenting the nurse list in console
         row_lin(mx_size*5);
         i++;
     }
-    string enter;
+    // string enter;
     // getchar();//1st getchar is for the chosen option 2nd is for enter
 }

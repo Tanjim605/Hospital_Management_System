@@ -70,15 +70,18 @@ int run()
     else if(user=="2")  //doctor login korar por
     {
         //login er kaj baki @arif
-
+        login_doctor();
+        cout<<"\n\n\t\tDoctor login successful!\n\n";
+        sleep(2);
         while(1)        //  doc log in er porer kaj
         {
             system("CLS");
-            cout<<"\n\n\t\t*Welcome to our Hospital*"<<endl
+            cout<<"\n\n\t\t*Welcome " << dr[log_doc].id << "*" <<endl
                 <<"\t\t-------------------------"<<endl<<endl
                 <<"\t\t  1. View Profile" <<endl
                 <<"\t\t  2. Patient list" <<endl
-                <<"\t\t  3. Exit" <<endl;
+                <<"\t\t  3. Update info"  <<endl
+                <<"\t\t  0. Exit" <<endl;
             string choice;
             getline(cin,choice);
             system("CLS");
@@ -86,15 +89,18 @@ int run()
             if(choice == "1")
             {
                 system("CLS");
-                show_doc_profile("D1001");//**ekhaner fixed string ta change kore logged in kora doc er id dewa lagbe
-                // sleep(1);
+                show_doc_profile(dr[log_doc].id);
             }
             else if(choice == "2")
             {
                 system("CLS");
-                pat_under_doc("D1001");//**ekhaner fixed string ta change kore logged in kora doc er id dewa lagbe
+                pat_under_doc(dr[log_doc].id);
             }
             else if(choice == "3")
+            {
+                update_doctor();
+            }
+            else if(choice == "0")
             {
                 system("CLS");
                 goto abar;

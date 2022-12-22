@@ -21,7 +21,7 @@ void login_admin()
         if (f)
         {
             cout << "\t\tInvalid USER. Press ENTER to try again!";
-            getchar();
+            ENT = getch();
         }
         else
             break;
@@ -66,7 +66,6 @@ void login_admin()
                     cout<<"\t\t\t\t\t\t\t\t\tWait for "<< i <<" seconds, try again";
                     sleep(1);
                 }
-
                 log_cnt=0;
                 system("CLS");
                 cout<<"press ENTER !";
@@ -86,7 +85,7 @@ void login_admin()
             }
             pass.clear();
             //cout << "\n\t\tWrong PASSWORD. Press ENTER to try again!";
-            getchar();
+            ENT = getch();
         }
     }
 }

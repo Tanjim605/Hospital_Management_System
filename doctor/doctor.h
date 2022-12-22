@@ -5,14 +5,14 @@ using namespace std;
 class doctor:public person
 {
 public:
-    string id,degree,college,spacialist;
+    string id,degree,college,spacialist,pass;
 };
 
 string doc_file="doctor/doctor.txt";        //file declaration as string
 string last_doc="doctor/last_doctor.txt";
 
 char y,doc_ent;
-int mm=0;
+int mm=0,log_doc;
 doctor dr[100];
 int number_of_doctor=0;      //gobal declaretion of total_doctor as we need everytime
 
@@ -22,3 +22,4 @@ int number_of_doctor=0;      //gobal declaretion of total_doctor as we need ever
 #include"update_doctor.h"
 #include"remove_doctor.h"
 #include"show_doc_profile.h"
+#include"login_doctor.h"

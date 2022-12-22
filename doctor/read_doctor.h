@@ -9,6 +9,7 @@ void read_doctor()                  //reading from doctor.txt file. *** Mendator
         getline(di,dr[i].degree);
         getline(di,dr[i].college);
         getline(di,dr[i].mobile_no);
+        getline(di,dr[i].pass);
         i++;
         getline(di,ch);
     }

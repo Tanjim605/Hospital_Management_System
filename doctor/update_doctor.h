@@ -1,44 +1,57 @@
 void update_doctor()
 {
-    read_doctor();
     here:
+    read_doctor();
     system("CLS");
+    int f=1;
     string idd,option;
-    cout<<"\t\tWhich info do you want to update?\n\n";
-    cout<<"\t\t1: Mobile Number?\n";
+    cout<<"\n\n\t\tWhich info do you want to update?\n\n";
+    cout<<"\t\t  1: Mobile Number?\n";
+    cout<<"\t\t  2: Password?\n";
+    cout<<"\t\tPress 0 to Escape\n";
     getline(cin,option);
     system("CLS");
-    if(option!="1")
+    if(option=="1")
+    {
+        system("CLS");
+        cout<<"\n\n\t\tEnter the new Mobile Number : ";
+        getline(cin,idd);
+        dr[log_doc].mobile_no=idd;
+        cout<<"\n\n\t\tMobile Number has been updated successfully\n\n";
+    }
+    else if(option=="2")
+    {
+        system("CLS");
+        string idc;
+        cout<<"\n\n\t\tEnter the new Password : ";
+        getline(cin,idd);
+        for(int i=0; ; i++)
+        {
+            system("CLS");
+            cout<<"\n\n\t\tEnter the new Password : " << idd;
+            cout << "\n\t\tConfirm Your Password  : ";
+            getline(cin,idc);
+            if(idd!=idc)
+            {
+                cout << "\n\n\n\t\tPassword didn't matched! Press Enter to try again";
+                doc_ent = getch();
+            }
+            else
+                break;
+        }
+        dr[log_doc].pass=idd;
+        cout<<"\n\n\t\tPassword has been updated successfully\n\n";
+    }
+    else if(option=="0")
+    {
+        system("CLS");
+        f=0;
+    }
+    else
     {
         cout<<"\n\n\t\t  Invalid Option, Please try Again..\n\n";
         sleep(1);
         goto here;
-    }
-    heree:
-    system("CLS");
-    cout << "\n\n\t\tPlease enter the Doctor's ID you want to change : ";
-    getline(cin,idd);
-    int f=0;
-    for(int i=0;i<number_of_doctor;i++)
-    {
-        if(dr[i].id==idd)
-        {
-            string m;
-            system("CLS");
-            cout<<"\n\n\t\tEnter the Mobile Number : ";
-            getline(cin,m);
-            dr[i].mobile_no=m;
-            cout<<endl<<"\t\tMobile Number has been updated successfully\n\n";
-            f=1;
-            break;
-        }
-    }
-    if(f==0)
-    {
-        system("CLS");
-        cout<<endl<<"\t\t:( Sorry couldn't find that ID, Please try Again..\n\n";
-        sleep(1);
-        goto heree;
     }
     ofstream on(doc_file);
     int i=0;
@@ -49,11 +62,15 @@ void update_doctor()
         on<<dr[i].degree<<endl;
         on<<dr[i].college<<endl;
         on<<dr[i].mobile_no<<endl;
+        on<<dr[i].pass<<endl;
         i++;
         on<<"\n";
     }
-
     on.close();
-    cout<<"\t\tPress any key to proceed...";
-    doc_ent=getch();
+    if(f)
+    {
+        cout<<"\t\tPress any key to proceed...";
+        doc_ent=getch();
+        goto here;
+    }
 }

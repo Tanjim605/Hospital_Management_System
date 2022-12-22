@@ -21,6 +21,7 @@ void delete_doctor()         //deleting a person. We take the ID of the person a
             doo<<dr[i].degree<<endl;
             doo<<dr[i].college<<endl;
             doo<<dr[i].mobile_no<<endl;
+            doo<<dr[i].pass<<endl;
             doo<<"\n";
         }
         else
