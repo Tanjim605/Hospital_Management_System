@@ -24,17 +24,17 @@ void update_admin()
                 if(uid==admin[m].id)
                 {
                     cout << "\t\tYou already have the same USER! Press Enter to try again!";
-                    getchar();
+                    ENT = getch();
                 }
                 else if(sz(uid)<6)
                 {
                     cout << "\t\tUSER have to be more than 5 characters. Press ENTER to try again!";
-                    getchar();
+                    ENT = getch();
                 }
                 else if (f)
                 {
                     cout << "\t\tThis USER is already taken. Press ENTER to try again!";
-                    getchar();
+                    ENT = getch();
                 }
                 else
                     break;
@@ -67,7 +67,7 @@ void update_admin()
                     admin[m].id = uid;
                     system("CLS");
                     cout << "\n\t\tYour USER is Updated!\n\t\tPress Enter!";
-                    getchar();
+                    ENT = getch();
                     break;
                 }
                 else
@@ -78,7 +78,7 @@ void update_admin()
                     for(int i=0; i<sz(pass); i++)
                         cout << "*";
                     cout << "\n\n\t\tWrong Password! Press Enter to try again!";
-                    getchar();
+                    ENT = getch();
                 }
                 pass.clear();
             }
@@ -95,13 +95,13 @@ void update_admin()
                 if(upass==admin[m].get_pass())
                 {
                     cout << "\t\tYou already have the same password! Press Enter to try again!";
-                    getchar();
+                    ENT = getch();
                     continue;
                 }
                 else if(sz(upass)<6)
                 {
                     cout << "\t\tPASS have to be more than 5 characters. Press ENTER to try again!";
-                    getchar();
+                    ENT = getch();
                     continue;
                 }
                 cout << "\t\tEnter Password Again  : ";
@@ -111,7 +111,7 @@ void update_admin()
                 {
                     cout << "\t\tPassword didn't matched..\n"
                          << "\t\tPlease Try Again..";
-                        getchar(); 
+                        ENT = getch(); 
                     system("CLS");
                     cout << "\t\t**PASSWORD require minimum 6 characters**\n\n";
                     cout << "\t\tEnter a new Password  : "<<upass<<endl;
@@ -147,7 +147,7 @@ void update_admin()
                     admin[m].set_pass(upass);
                     system("CLS");
                     cout << "\n\t\tYour password is Updated!\n\t\tPress Enter!";
-                    getchar();
+                    ENT = getch();
                     break;
                 }
                 else
@@ -158,7 +158,7 @@ void update_admin()
                     for(int i=0; i<sz(pass); i++)
                         cout << "*";
                     cout << "\n\n\t\tWrong Password! Press Enter to try again!";
-                    getchar();
+                    ENT = getch();
                 }
                 pass.clear();
             }

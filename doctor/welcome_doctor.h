@@ -11,8 +11,7 @@ void welcome_doctor()
         cout<<"\n\n\t\tPlease select an option\n";
         cout<<"\n\t\t  1: Add a new Doctor\n";
         cout<<"\n\t\t  2: Remove a doctor's Information\n";
-        cout<<"\n\t\t  3: Update a doctor's Information\n";
-        cout<<"\n\t\t  4: Show all doctor's Information\n";
+        cout<<"\n\t\t  3: Show all doctor's Information\n";
         cout<<"\n\t\tEnter 0 to escape\n\n";
         string option;
         getline(cin,option);
@@ -24,8 +23,6 @@ void welcome_doctor()
         else if(option == "2")
             delete_doctor();
         else if(option == "3")
-            update_doctor();
-        else if(option == "4")
         {
             show_doctor();
             cout<<"\n\t\tPress any key to proceed...";

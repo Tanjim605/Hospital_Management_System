@@ -5,5 +5,5 @@ void show_admin()
     for (int i = 0; i < n; i++)
         cout <<"\t\t  "<< i + 1 << ".  " << admin[i].id << endl;
     cout << "\n\t\tPress ENTER to go back to main menu!"; // problem
-    getchar();
+    ENT = getch();
 }
