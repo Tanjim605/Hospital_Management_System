@@ -56,7 +56,7 @@ int run()
                     welcome_doctor();
                 else if(choice=="4")
                     welcome_nurse();
-                else
+                else        //for invalid input
                 {
                     system("CLS");
                     cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
@@ -70,16 +70,41 @@ int run()
     else if(user=="2")  //doctor login korar por
     {
         //login er kaj baki @arif
-        while(1)
+
+        while(1)        //  doc log in er porer kaj
         {
             system("CLS");
             cout<<"\n\n\t\t*Welcome to our Hospital*"<<endl
                 <<"\t\t-------------------------"<<endl<<endl
                 <<"\t\t  1. View Profile" <<endl
-                <<"\t\t  2. Patient list" <<endl;
+                <<"\t\t  2. Patient list" <<endl
+                <<"\t\t  3. Exit" <<endl;
             string choice;
             getline(cin,choice);
             system("CLS");
+
+            if(choice == "1")
+            {
+                system("CLS");
+                show_doc_profile("D1001");//**ekhaner fixed string ta change kore logged in kora doc er id dewa lagbe
+                // sleep(1);
+            }
+            else if(choice == "2")
+            {
+                system("CLS");
+                pat_under_doc("D1001");//**ekhaner fixed string ta change kore logged in kora doc er id dewa lagbe
+            }
+            else if(choice == "3")
+            {
+                system("CLS");
+                goto abar;
+            }
+            else        //for invalid input
+            {
+                system("CLS");
+                cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
+                sleep(1);
+            }
         }
     }
 
@@ -113,7 +138,7 @@ int run()
                 system("CLS");
                 goto abar;
             }
-            else
+            else        //for invalid input
             {
                 system("CLS");
                 cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
@@ -121,6 +146,4 @@ int run()
             }
         }
     }
-
-    
 }

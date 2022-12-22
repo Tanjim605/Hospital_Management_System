@@ -120,10 +120,11 @@ void add_patient()
     cout<<"\t\t  Patient problem  : ";
     getline(cin,new_patient.reason);
     cout<<endl;
-    cout<<"\t\t  Choose Doctor    : ";
+    cout<<"\t\t  Choose Doctor(ID): ";
     cout<<endl;
     show_doctor();
     getline(cin,new_patient.doc);
+    transform(new_patient.doc.begin(),new_patient.doc.end(),new_patient.doc.begin(),::toupper);
     cout<<endl;
     // select_doctor();
     ofstream on(patient_file);

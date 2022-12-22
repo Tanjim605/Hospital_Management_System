@@ -21,3 +21,4 @@ int number_of_doctor=0;      //gobal declaretion of total_doctor as we need ever
 #include"add_doctor.h"
 #include"update_doctor.h"
 #include"remove_doctor.h"
+#include"show_doc_profile.h"

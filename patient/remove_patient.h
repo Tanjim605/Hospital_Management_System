@@ -6,8 +6,8 @@ void remove_patient()
     system("CLS");
     while(1)
     {
-        cout<<"\n\n\t\tDELTETING PATIENT DETAILS\n";
-        cout<<"\t\t-----------------------\n";
+        cout<<"\n\n\t\tDISCHARGING PATIENT\n";
+        cout<<"\t\t-------------------\n";
         cout<<"\t\tID          : ";
         getline(cin,del_id);
         i=0,f=0;
@@ -42,6 +42,7 @@ void remove_patient()
             inn<<pat[i].mobile_no<<endl;
             inn<<pat[i].blood_group<<endl;
             inn<<pat[i].reason<<endl;
+            inn<<pat[i].doc<<endl;
             inn<<"\n";
         }
         else if(del_id==pat[i].id)
@@ -51,7 +52,7 @@ void remove_patient()
         i++;
     }
     system("CLS");
-    cout<<"\n\n\t\tYour given information is removed. Thanks for your co-operation.\n\n";
+    cout<<"\n\n\t\tYour targeted patient is discharged. Thanks for your co-operation.\n\n";
     number_of_patient--;
     cout<<"\n\t\tPress any key to proceed...";
     pat_ent=getch();
