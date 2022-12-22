@@ -10,7 +10,7 @@ void welcome_patient()
         system("CLS");
         cout<<"\n\n\t\tPlease select an option\n";
         cout<<"\n\t\t  1: Add a new patient\n";
-        cout<<"\n\t\t  2: Remove a patient's Information\n";
+        cout<<"\n\t\t  2: Discharge a patient\n";
         cout<<"\n\t\t  3: Search an individual patient's Information\n";
         cout<<"\n\t\t  4: Update an old Patient's Information\n";
         cout<<"\n\t\t  5: Show all Patient's Information\n";

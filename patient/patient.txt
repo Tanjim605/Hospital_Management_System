@@ -2,7 +2,7 @@ P1001
 Takib Khan
 55
 M
-0000000000
+01884055563
 O+
 Heart Problem
 D1001
@@ -20,7 +20,7 @@ P1003
 Tanjima Begum
 45
 F
-01884055563
+01886055563
 O+
 Urine Infection
 D1002
@@ -29,7 +29,7 @@ P1004
 Sakib Ahmed
 45
 M
-0123456789
+01534567894
 O+
 Gastric
 D1003
@@ -38,7 +38,7 @@ P1005
 Rayan Kuddus 
 29
 M
-0125632156
+01556321564
 A+
 Mental Problem
 D1004
