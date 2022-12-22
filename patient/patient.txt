@@ -52,3 +52,12 @@ A+
 Fever
 D1005
 
+P1008
+Khaled Kashem
+21
+M
+01848111174
+AB+
+Heart
+D1001
+

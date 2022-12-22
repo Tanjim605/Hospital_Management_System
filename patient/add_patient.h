@@ -119,13 +119,53 @@ void add_patient()
     cout<<endl;
     cout<<"\t\t  Patient problem  : ";
     getline(cin,new_patient.reason);
-    cout<<endl;
-    cout<<"\t\t  Choose Doctor(ID): ";
+    
+
+    try_again:
+
     cout<<endl;
     show_doctor();
+    cout<<"\t\t  Choose Doctor(ID): ";
+
     getline(cin,new_patient.doc);
+
     transform(new_patient.doc.begin(),new_patient.doc.end(),new_patient.doc.begin(),::toupper);
     cout<<endl;
+
+    read_doctor();
+    bool found  = false;
+    for(int i=0;i<number_of_doctor;i++)
+    {
+        if(dr[i].id==new_patient.doc)
+        {
+            found = true;
+            break;
+        }
+    }
+    if(!found)
+    {
+        cout << "\n\n\t\tSorry Doctor not found! Please try again.";
+        sleep(1);
+        system("CLS");
+        cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
+        cout<<"\t\t--------------------------\n";
+        cout<<"\t\t  ID               : "<<new_patient.id<<endl;
+        cout<<endl;
+        cout<<"\t\t  Patient Name     : "<<new_patient.name<<endl;
+        cout<<endl;
+        cout<<"\t\t  Age              : "<<new_patient.age<<endl;
+        cout<<endl;
+        cout<<"\t\t  Gender(M/F)      : "<<new_patient.gender<<endl;
+        cout<<endl;
+        cout<<"\t\t  Moblie No.       : "<<new_patient.mobile_no<<endl;
+        cout<<endl;
+        cout<<"\t\t  Blood Group      : "<<new_patient.blood_group<<endl;
+        cout<<endl;
+        cout<<"\t\t  Patient problem  : "<<new_patient.reason<<endl;
+
+        goto try_again;
+    }
+
     // select_doctor();
     ofstream on(patient_file);
     int i=0;
