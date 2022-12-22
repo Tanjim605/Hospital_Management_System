@@ -69,15 +69,14 @@ int run()
 
     else if(user=="2")  //doctor login korar por
     {
-        //login er kaj baki @arif
         login_doctor();
         cout<<"\n\n\t\tDoctor login successful!\n\n";
         sleep(2);
         while(1)        //  doc log in er porer kaj
         {
             system("CLS");
-            cout<<"\n\n\t\t*Welcome " << dr[log_doc].id << "*" <<endl
-                <<"\t\t-------------------------"<<endl<<endl
+            cout<<"\n\n\t\t* Welcome Dr. " << dr[log_doc].name << " *" <<endl
+                <<"\t\t-------------------------------------"<<endl<<endl
                 <<"\t\t  1. View Profile" <<endl
                 <<"\t\t  2. Patient list" <<endl
                 <<"\t\t  3. Update info"  <<endl

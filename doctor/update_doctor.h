@@ -8,7 +8,7 @@ void update_doctor()
     cout<<"\n\n\t\tWhich info do you want to update?\n\n";
     cout<<"\t\t  1: Mobile Number?\n";
     cout<<"\t\t  2: Password?\n";
-    cout<<"\t\tPress 0 to Escape\n";
+    cout<<"\n\t\tPress 0 to Escape\n";
     getline(cin,option);
     system("CLS");
     if(option=="1")

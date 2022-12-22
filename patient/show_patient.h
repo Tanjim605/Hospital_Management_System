@@ -1,9 +1,9 @@
-string st[7] ={"ID","NAME","AGE","GENDER","MOBILE NO.","BLOOD GROUP","PATIENT PROBLEM"};
+string st[8] ={"ID","NAME","AGE","GENDER","MOBILE NO.","BLOOD GROUP","PATIENT PROBLEM","ROOM NO."};
 
 void rowline(int a)
 {
     cout<<"\t\t  ";
-    for(int i=0;i<a+8;i++)
+    for(int i=0;i<a+9;i++)
         cout<<"-";
     cout<<endl;
 }
@@ -20,7 +20,7 @@ void infoline(string a,int len)
 void first_line(int mx)
 {
     cout<<"\t\t  ";
-    for(int i=0;i<7;i++)
+    for(int i=0;i<8;i++)
     {
         cout<<"| "<<st[i];
         for(int j=st[i].length();j<mx-1;j++)
@@ -37,8 +37,8 @@ void show_patient()               //presenting the nurse list in console
     read_patient();               //read the txt file first
     cout<<"\n\n\t\t  Patient List : \n";
     cout<<"\t\t  ------------\n";
-    int length[7]={0};
-    for(int j=0;j<7;j++)
+    int length[8]={0};
+    for(int j=0;j<8;j++)
     {
         int i = 0;
         while(i<number_of_patient)
@@ -55,20 +55,22 @@ void show_patient()               //presenting the nurse list in console
                 length[j] = max(length[j],(int)pat[i].mobile_no.length());
             else if(j==5)
                 length[j] = max(length[j],(int)pat[i].blood_group.length());
-            else
+            else if(j==6)
                 length[j] = max(length[j],(int)pat[i].reason.length());
+            else 
+                length[j] = max(length[j],(int)pat[i].room.length());
             i++;
         }
     }
     int  len_row = 0;
-    for(int i=0;i<7;i++)
+    for(int i=0;i<8;i++)
         len_row+=max(length[i],(int)st[i].length());
-    sort(length,length+7);
-    int mx_size = length[6];
+    sort(length,length+8);
+    int mx_size = length[7];
     mx_size+=2;
-    rowline(mx_size*7);
+    rowline(mx_size*8);
     first_line(mx_size);
-    rowline(mx_size*7);
+    rowline(mx_size*8);
     int i = 0;
     while(i<number_of_patient)
     {
@@ -80,8 +82,9 @@ void show_patient()               //presenting the nurse list in console
         infoline(pat[i].mobile_no,mx_size);
         infoline(pat[i].blood_group,mx_size);
         infoline(pat[i].reason,mx_size);
+        infoline(pat[i].room,mx_size);
         cout<<"|"<<endl;
-        rowline(mx_size*7);
+        rowline(mx_size*8);
         i++;
     }
     cout<<"\n\t\tPress any key to proceed...";
