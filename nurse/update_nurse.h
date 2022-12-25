@@ -38,8 +38,8 @@ void update_nurse()
         }
         if(flag)
         {
-            cout << "\n\t\tID not found! Press Enter to try again."<<endl;
-            cin.get();
+            cout << "\n\t\tID not found! Press any key to try again."<<endl;
+            nur_ent = getch();
             goto here;
         }
         int i=0;
