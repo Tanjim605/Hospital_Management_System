@@ -79,9 +79,9 @@ void login_admin()
                     cout<<"*";
                 cout << endl << endl;
                 if(log_cnt<2)
-                    cout<<"\t\tInvalid User or Password. You have "<<3-log_cnt<<" attempts left. Try again!" << endl << endl;
+                    cout<<"\t\tWrong Password. You have "<<3-log_cnt<<" attempts left. Try again!" << endl << endl;
                 else if(log_cnt==2)
-                    cout<<"\t\tInvalid User or Password. You have "<<3-log_cnt<<" attempt left. Try again!" << endl << endl;
+                    cout<<"\t\tWrong Password. You have "<<3-log_cnt<<" attempt left. Try again!" << endl << endl;
             }
             pass.clear();
             //cout << "\n\t\tWrong PASSWORD. Press ENTER to try again!";

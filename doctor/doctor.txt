@@ -6,7 +6,7 @@ DMC
 asbs
 
 D1002
-Mr. Jamil As-ad
+Jamil As-ad
 MBBS
 CMC
 01865593488
@@ -27,7 +27,7 @@ CMC
 doc123
 
 D1005
-Mr. Monsur Alam
+Monsur Alam
 MBBS
 CMC
 01819805468

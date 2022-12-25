@@ -67,7 +67,7 @@ int run()
         }
     }
 
-    else if(user=="2")  //doctor login korar por
+    else if(user=="2")  //doctor er shob kaj
     {
         login_doctor();
         cout<<"\n\n\t\tDoctor login successful!\n\n";
