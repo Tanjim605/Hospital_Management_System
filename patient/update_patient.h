@@ -64,6 +64,7 @@ void update_patient()
             on<<pat[i].mobile_no<<endl;
             on<<pat[i].blood_group<<endl;
             on<<pat[i].reason<<endl;
+            on<<pat[i].bill<<endl;
             on<<pat[i].doc<<endl;
             on<<pat[i].room<<endl;
             i++;

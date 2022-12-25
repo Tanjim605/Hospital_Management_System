@@ -1,0 +1,44 @@
+P1010
+Korim Mia
+44
+M
+01845962358
+B-
+Lung problem
+19700
+D1003
+108
+
+P1008
+Khaled Kashem
+21
+M
+01848111174
+AB+
+Heart
+5500
+D1001
+106
+
+P1011
+Rofik Hamza
+34
+M
+01542365895
+O+
+Rash
+500
+D1004
+109
+
+P1012
+Kabir Singh
+35
+M
+01523456895
+B-
+Liver
+7200
+D1002
+106
+
