@@ -80,7 +80,7 @@ int run()
                 <<"\t\t  1. View Profile" <<endl
                 <<"\t\t  2. Patient list" <<endl
                 <<"\t\t  3. Update info"  <<endl
-                <<"\t\t  0. Exit" <<endl;
+                <<"\t\t  0. Exit\n\t\t" ;
             string choice;
             getline(cin,choice);
             system("CLS");

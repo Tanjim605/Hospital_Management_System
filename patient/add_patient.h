@@ -52,6 +52,7 @@ void add_patient()
     read_patient();
     system("CLS");
     patient new_patient;
+
     cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
     cout<<"\t\t--------------------------\n";
     cout<<"\t\t  ID               : ";
@@ -166,7 +167,7 @@ void add_patient()
         goto try_again;
     }
     new_patient.room = get_room();
-    // select_doctor();
+    new_patient.bill = "0";
 
 
 
@@ -177,6 +178,7 @@ void add_patient()
     pat[number_of_patient].mobile_no = new_patient.mobile_no;
     pat[number_of_patient].blood_group = new_patient.blood_group;
     pat[number_of_patient].reason = new_patient.reason;
+    pat[number_of_patient].bill = new_patient.bill;
     pat[number_of_patient].doc = new_patient.doc;
     pat[number_of_patient].room = new_patient.room;
     number_of_patient++;
@@ -191,6 +193,7 @@ void add_patient()
         on<<pat[i].mobile_no<<endl;
         on<<pat[i].blood_group<<endl;
         on<<pat[i].reason<<endl;
+        on<<pat[i].bill<<endl;
         on<<pat[i].doc<<endl;
         on<<pat[i].room<<endl;
         i++;
