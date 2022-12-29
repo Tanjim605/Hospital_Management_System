@@ -64,3 +64,47 @@ Broken leg
 D1003
 107
 
+P1014
+Jariat Ahmed
+25
+M
+01235687496
+B+
+Typhoed
+0
+D1005
+106
+
+P1015
+Zaviar Ali
+33
+M
+01523456897
+B+
+Nefraytise
+0
+D1004
+108
+
+P1016
+Jumael Kuddus
+22
+M
+01623547895
+A+
+Apendisyties
+0
+D1002
+109
+
+P1017
+Nairus Shifat
+23
+F
+01845698532
+B-
+Injury
+0
+D1004
+110
+

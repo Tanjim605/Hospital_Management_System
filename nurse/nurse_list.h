@@ -63,5 +63,5 @@ void nurse_list()               //presenting the nurse list in console
         row_line(mx_size*4);
         i++;
     }
-    
+    cout<<"\n\n\t\tTotal nurse in this hospital : "<<number_of_nurse<<endl;
 }

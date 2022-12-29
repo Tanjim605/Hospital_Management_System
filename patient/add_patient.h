@@ -200,7 +200,8 @@ void add_patient()
         on<<"\n";
     }
     on.close();
-    cout<<"\n\n\t\tYour given informations are added. Thanks for your co-operation.\n";
+    cout<<"\n\n\t\tYour given informations are added. Thanks for your co-operation.\n\n";
+    cout<<"\t\t  Patient's room no. is : "<<new_patient.room<<endl<<endl;
     cout<<"\t\tPress any key to proceed...";
     pat_ent=getch();
 }

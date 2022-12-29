@@ -15,6 +15,7 @@ void welcome_nurse()
         cout<<"\t\t  2: Remove a nurse's Information\n\n";
         cout<<"\t\t  3: Update an old nurse's Information\n\n";
         cout<<"\t\t  4: Show all nurse's Information\n\n";
+        cout<<"\t\t  5: Show archive nurse's Information\n\n";
         cout<<"\t\tEnter 0 to escape\n\n";
         string option;
         getline(cin,option);
@@ -30,6 +31,12 @@ void welcome_nurse()
         else if(option == "4")
         {
             nurse_list();
+            cout<<"\nPress any key...";
+            nur_ent=getch();
+        }
+        else if(option == "5")
+        {
+            show_archive_nurse();
             cout<<"\nPress any key...";
             nur_ent=getch();
         }
