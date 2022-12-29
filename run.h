@@ -130,6 +130,7 @@ int run()
             if(choice == "1")
             {
                 show_doctor();
+                cout<<"\n\t\tTotal doctor in this hospital : "<<number_of_doctor<<endl;
                 cout<<"\n\t\tPress any key to proceed...";
                 doc_ent=getch();
             }

@@ -12,8 +12,9 @@ void welcome_patient()
         cout<<"\n\t\t  1: Add a new patient\n";
         cout<<"\n\t\t  2: Discharge a patient\n";
         cout<<"\n\t\t  3: Search an individual patient's Information\n";
-        cout<<"\n\t\t  4: Update an old Patient's Information\n";
+        cout<<"\n\t\t  4: Update an existing Patient's Information\n";
         cout<<"\n\t\t  5: Show all Patient's Information\n";
+        cout<<"\n\t\t  6: Show archive Patient's Information\n";
         cout<<"\n\t\tEnter 0 to escape\n";
         string option;
         getline(cin,option);
@@ -29,6 +30,8 @@ void welcome_patient()
             update_patient();
         else if(option == "5")
             show_patient();
+        else if(option == "6")
+            show_archive_patient();
         else
         {
             system("CLS");

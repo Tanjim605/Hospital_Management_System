@@ -22,5 +22,6 @@ string get_room()
     {
         ret=room_count;
     }
+    hos_room.clear();
     return ret;
 }

@@ -87,6 +87,7 @@ void show_patient()               //presenting the nurse list in console
         rowline(mx_size*8);
         i++;
     }
+    cout<<"\n\n\t\tTotal patient in this hospital : "<<number_of_patient<<endl;
     cout<<"\n\t\tPress any key to proceed...";
     pat_ent=getch();
 

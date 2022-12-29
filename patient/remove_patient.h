@@ -30,25 +30,7 @@ void remove_patient()
     }
     f=0;
     i=0;
-    ifstream old_p(archive_patient_file);
-    string s;
-    int ap=0;
-    while (getline(old_p, archive_pat[ap].id))
-    {
-        getline(old_p, archive_pat[ap].name);
-        getline(old_p, archive_pat[ap].age);
-        getline(old_p, archive_pat[ap].gender);
-        getline(old_p, archive_pat[ap].mobile_no);
-        getline(old_p, archive_pat[ap].blood_group);
-        getline(old_p, archive_pat[ap].reason);
-        getline(old_p, archive_pat[ap].bill);
-        getline(old_p, archive_pat[ap].doc);
-        getline(old_p, archive_pat[ap].room);
-        ap++;
-        getline(old_p, s);
-    }
-    number_of_ap=ap;
-    old_p.close();
+    read_archive_patient();
     
 
 
@@ -73,16 +55,16 @@ void remove_patient()
         else if(del_id==pat[i].id)
         {
             f=1;
-            archive_pat[ap].id=pat[i].id;
-            archive_pat[ap].name=pat[i].name;
-            archive_pat[ap].age=pat[i].age;
-            archive_pat[ap].gender=pat[i].gender;
-            archive_pat[ap].mobile_no=pat[i].mobile_no;
-            archive_pat[ap].blood_group=pat[i].blood_group;
-            archive_pat[ap].reason=pat[i].reason;
-            archive_pat[ap].bill=pat[i].bill;
-            archive_pat[ap].doc=pat[i].doc;
-            archive_pat[ap].room=pat[i].room;
+            archive_pat[number_of_ap].id=pat[i].id;
+            archive_pat[number_of_ap].name=pat[i].name;
+            archive_pat[number_of_ap].age=pat[i].age;
+            archive_pat[number_of_ap].gender=pat[i].gender;
+            archive_pat[number_of_ap].mobile_no=pat[i].mobile_no;
+            archive_pat[number_of_ap].blood_group=pat[i].blood_group;
+            archive_pat[number_of_ap].reason=pat[i].reason;
+            archive_pat[number_of_ap].bill=pat[i].bill;
+            archive_pat[number_of_ap].doc=pat[i].doc;
+            archive_pat[number_of_ap].room=pat[i].room;
             number_of_ap++;
         }
         i++;
@@ -93,22 +75,22 @@ void remove_patient()
     cout<<"\n\n\t\t  Your targeted patient is discharged. Thanks for your co-operation.\n\n\n";
     number_of_patient--;
 
-    cout << "\t\t  Name : " << archive_pat[ap].name<<endl<<endl;
+    cout << "\t\t  Name : " << archive_pat[number_of_ap].name<<endl<<endl;
     cout<<"\t\t  Here is your bill:\n";
-    cout<<"\t\t    sl.  Tests      ------- Cost\n"
+    cout<<"\t\t    sl.  Tests                Cost\n"
         <<"\t\t  --------------------------------\n";
 
     long long total_bill=0;
-    for(int i=0;i<archive_pat[ap].bill.size();i++)
+    for(int i=0;i<archive_pat[number_of_ap].bill.size();i++)
     {
-        int tp=archive_pat[ap].bill[i]-'0';
-        cout<<"\t\t    "<<i+1 <<". " << tests[tp] <<"      ------- "<< cost[tp]<<endl;
+        int tp=archive_pat[number_of_ap].bill[i]-'0';
+        cout<<"\t\t     "<<i+1 <<". "<<setfill('-')<<setw(12)<<left<<tests[tp]<<"-------- "<<setfill(' ')<<setw(5)<<right<<cost[tp]<<endl;
         total_bill+=cost[tp];
     }
-    cout<<"\t\t  ------------------------------------------"
-        <<"\n\t\t  Total bill               :"<<total_bill<< "/= BDT"<<endl;
+    cout<<"\t\t  ------------------------------------------\n"
+        <<"\t\t  Total bill               : "<<total_bill<< "/= BDT"<<endl;
 
-    archive_pat[ap].bill=to_string(total_bill);
+    archive_pat[number_of_ap].bill=to_string(total_bill);
     
     ofstream iinn(archive_patient_file);
     i=0;
