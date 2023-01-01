@@ -5,7 +5,7 @@ using namespace std;
 class doctor:public person
 {
 public:
-    string id,degree,college,spacialist,pass;
+    string id,degree,college,specialist,pass;
 };
 
 string doc_file="doctor/doctor.txt";        //file declaration as string

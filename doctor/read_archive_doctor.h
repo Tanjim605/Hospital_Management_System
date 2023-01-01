@@ -10,6 +10,7 @@ void read_archive_doctor()
         getline(old_d, archive_dr[ad].degree);
         getline(old_d, archive_dr[ad].college);
         getline(old_d, archive_dr[ad].mobile_no);
+        getline(old_d, archive_dr[ad].specialist);
         ad++;
         getline(old_d, ch);
     }

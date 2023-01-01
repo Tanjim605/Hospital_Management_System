@@ -52,6 +52,7 @@ void add_patient()
     read_patient();
     system("CLS");
     patient new_patient;
+    int doc_pos;
 
     cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
     cout<<"\t\t--------------------------\n";
@@ -122,31 +123,32 @@ void add_patient()
     getline(cin,new_patient.reason);
 
 
-    try_again:
-
     cout<<endl;
     show_doctor();
     cout<<"\t\t  Choose Doctor(ID): ";
 
-    getline(cin,new_patient.doc);
-
-    transform(new_patient.doc.begin(),new_patient.doc.end(),new_patient.doc.begin(),::toupper);
-    cout<<endl;
-
-    read_doctor();
-    bool found  = false;
-    for(int i=0;i<number_of_doctor;i++)
-    {
-        if(dr[i].id==new_patient.doc)
+    while(getline(cin,new_patient.doc))         //new way to stop showing doctor list after pickup
+    {        
+        transform(new_patient.doc.begin(),new_patient.doc.end(),new_patient.doc.begin(),::toupper);
+        cout<<endl;
+        read_doctor();
+        bool found  = false;
+        for(int i=0;i<number_of_doctor;i++)
         {
-            found = true;
+            if(dr[i].id==new_patient.doc)
+            {
+                doc_pos=i;
+                found = true;
+                break;
+            }
+        }
+        if(found)
+        {
             break;
         }
-    }
-    if(!found)
-    {
-        cout << "\n\n\t\tSorry Doctor not found! Please try again.";
+        cout << "\n\n\t\tSorry, Doctor not found! Please try again.";
         sleep(1);
+
         system("CLS");
         cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
         cout<<"\t\t--------------------------\n";
@@ -163,9 +165,32 @@ void add_patient()
         cout<<"\t\t  Blood Group      : "<<new_patient.blood_group<<endl;
         cout<<endl;
         cout<<"\t\t  Patient problem  : "<<new_patient.reason<<endl;
+        cout<<endl;
+        show_doctor();
+        cout<<"\t\t  Choose Doctor(ID): ";
 
-        goto try_again;
     }
+    
+    system("CLS");
+    cout<<"\n\n\t\tADDING NEW PATIENT DETAILS\n";
+    cout<<"\t\t--------------------------\n";
+    cout<<"\t\t  ID               : "<<new_patient.id<<endl;
+    cout<<endl;
+    cout<<"\t\t  Patient Name     : "<<new_patient.name<<endl;
+    cout<<endl;
+    cout<<"\t\t  Age              : "<<new_patient.age<<endl;
+    cout<<endl;
+    cout<<"\t\t  Gender(M/F)      : "<<new_patient.gender<<endl;
+    cout<<endl;
+    cout<<"\t\t  Moblie No.       : "<<new_patient.mobile_no<<endl;
+    cout<<endl;
+    cout<<"\t\t  Blood Group      : "<<new_patient.blood_group<<endl;
+    cout<<endl;
+    cout<<"\t\t  Patient problem  : "<<new_patient.reason<<endl;
+    cout<<endl;
+    cout<<"\t\t  Choosen Doctor   : Dr. "<<dr[doc_pos].name<<endl;
+    cout<<endl;
+
     new_patient.room = get_room();
     new_patient.bill = "0";
 

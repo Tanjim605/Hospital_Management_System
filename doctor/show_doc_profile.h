@@ -14,7 +14,7 @@ cout<<
 "                         :           : \t\t       |   Degree       : "<<dr[log_doc].degree<< endl <<
 "                           '''''''''   \t\t       |   College      : "<<dr[log_doc].college<< endl <<
 "                            |    |     \t\t       |   Mobile No.   : "<<dr[log_doc].mobile_no<< endl <<
-"                        .'''      '''. \t\t"       << endl <<
+"                        .'''      '''. \t\t       |   Specialist   : "<<dr[log_doc].specialist<< endl <<
 "                     ..::::::::::::::::..\n"
 "                    :::::::::::::::::::::: \n"<<endl<<endl<<endl;
     cout<<"\n\t\tPress any key to proceed...";
