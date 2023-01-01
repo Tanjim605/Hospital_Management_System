@@ -6,7 +6,7 @@ M
 O+
 Heart Problem
 01234
-D1001
+D1002
 101
 
 P1002
@@ -28,16 +28,16 @@ F
 O+
 Urine Infection
 0
-D1002
+D1004
 103
 
 P1004
 Sakib Ahmed
-45
+8
 M
 01534567894
 O+
-Gastric
+Rash
 0
 D1003
 104
@@ -72,7 +72,7 @@ M
 B+
 Typhoed
 0
-D1005
+D1001
 106
 
 P1015
@@ -83,7 +83,7 @@ M
 B+
 Nefraytise
 0
-D1004
+D1005
 108
 
 P1016
@@ -107,4 +107,48 @@ Injury
 0
 D1004
 110
+
+P1018
+Hure Jannat
+17
+F
+01845897564
+A+
+Fever
+012
+D1005
+111
+
+P1019
+Shishir Shah
+19
+M
+01712356897
+A+
+Mental Health
+0
+D1001
+112
+
+P1020
+Azmain Faisal
+21
+M
+01723568794
+A+
+Lung problem
+0
+D1002
+113
+
+P1021
+Afnan Hasan
+22
+M
+01890430587
+A-
+Allergie
+0
+D1004
+114
 

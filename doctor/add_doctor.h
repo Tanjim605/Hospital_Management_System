@@ -35,6 +35,8 @@ void add_doctor() // adding new doctor.
     getline(cin, new_doctor.college);
     cout << "\t\t  Mobile No.     : ";
     getline(cin, new_doctor.mobile_no);
+    cout << "\t\t  Specialist     : ";
+    getline(cin, new_doctor.specialist);
 
     ofstream doo(doc_file); // opening file in write mode to rewrite every doctor
     int i = 0;
@@ -43,6 +45,7 @@ void add_doctor() // adding new doctor.
     dr[number_of_doctor].degree = new_doctor.degree;
     dr[number_of_doctor].college = new_doctor.college;
     dr[number_of_doctor].mobile_no = new_doctor.mobile_no;
+    dr[number_of_doctor].specialist = new_doctor.specialist;
     dr[number_of_doctor].pass = "doc123";
     number_of_doctor++;          // total doctor number increase by one
     while (i < number_of_doctor) // rewriting doctor data again in txt file.   ** BE AWARE WITH THE VAUE OF i
@@ -52,6 +55,7 @@ void add_doctor() // adding new doctor.
         doo << dr[i].degree << endl;
         doo << dr[i].college << endl;
         doo << dr[i].mobile_no << endl;
+        doo << dr[i].specialist << endl;
         doo << dr[i].pass << endl;
         i++;
         doo << "\n";

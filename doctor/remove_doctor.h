@@ -27,6 +27,7 @@ void delete_doctor()
             doo<<dr[i].degree<<endl;
             doo<<dr[i].college<<endl;
             doo<<dr[i].mobile_no<<endl;
+            doo<<dr[i].specialist<<endl;
             doo<<dr[i].pass<<endl;
             doo<<"\n";
         }
@@ -38,6 +39,7 @@ void delete_doctor()
             archive_dr[number_of_ad].degree=dr[i].degree;
             archive_dr[number_of_ad].college=dr[i].college;
             archive_dr[number_of_ad].mobile_no=dr[i].mobile_no;
+            archive_dr[number_of_ad].specialist=dr[i].mobile_no;
             number_of_ad++;
         }
         i++;                    //***** KEEP THIS INCREAMENT OUTSIDE OF "if condition"   *****
@@ -59,6 +61,7 @@ void delete_doctor()
         adoo<<archive_dr[i].degree<<endl;
         adoo<<archive_dr[i].college<<endl;
         adoo<<archive_dr[i].mobile_no<<endl;
+        adoo<<archive_dr[i].specialist<<endl;
         adoo<<"\n";
         i++;
     }

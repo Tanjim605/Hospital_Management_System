@@ -75,22 +75,22 @@ void remove_patient()
     cout<<"\n\n\t\t  Your targeted patient is discharged. Thanks for your co-operation.\n\n\n";
     number_of_patient--;
 
-    cout << "\t\t  Name : " << archive_pat[number_of_ap].name<<endl<<endl;
+    cout << "\t\t  Name : " << archive_pat[number_of_ap-1].name<<endl<<endl;
     cout<<"\t\t  Here is your bill:\n";
     cout<<"\t\t    sl.  Tests                Cost\n"
         <<"\t\t  --------------------------------\n";
 
     long long total_bill=0;
-    for(int i=0;i<archive_pat[number_of_ap].bill.size();i++)
+    for(int i=0;i<archive_pat[number_of_ap-1].bill.size();i++)
     {
-        int tp=archive_pat[number_of_ap].bill[i]-'0';
+        int tp=archive_pat[number_of_ap-1].bill[i]-'0';
         cout<<"\t\t     "<<i+1 <<". "<<setfill('-')<<setw(12)<<left<<tests[tp]<<"-------- "<<setfill(' ')<<setw(5)<<right<<cost[tp]<<endl;
         total_bill+=cost[tp];
     }
     cout<<"\t\t  ------------------------------------------\n"
         <<"\t\t  Total bill               : "<<total_bill<< "/= BDT"<<endl;
 
-    archive_pat[number_of_ap].bill=to_string(total_bill);
+    archive_pat[number_of_ap-1].bill=to_string(total_bill);
     
     ofstream iinn(archive_patient_file);
     i=0;

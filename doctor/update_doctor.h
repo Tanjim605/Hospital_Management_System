@@ -62,6 +62,7 @@ void update_doctor()
         on<<dr[i].degree<<endl;
         on<<dr[i].college<<endl;
         on<<dr[i].mobile_no<<endl;
+        on<<dr[i].specialist<<endl;
         on<<dr[i].pass<<endl;
         i++;
         on<<"\n";
