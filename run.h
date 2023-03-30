@@ -1,4 +1,5 @@
 #include "class/person.h"
+#include "super_admin/welcome_sp_admin.h"
 #include "admin/welcome_admin.h"
 #include "doctor/welcome_doctor.h"
 #include "nurse/welcome_nurse.h"
@@ -12,9 +13,68 @@ int run()
     welcome();
     abar:
     string user=get_user();
-    if(user=="0")
+
+    if(user=="0")   //code break
         return 0;
-    if(user=="1") //admin er shob kaaj
+
+    if(user == "1") //super admin works
+    {
+        super_logout=0;
+        system("CLS");
+        welcome_sp_admin();
+        if(super_back)
+            goto super_back;
+        if(super_logout==1)
+        {
+            system("CLS");
+            goto abar;
+        }
+        if(super_logout!=1)
+        {
+            cout<<"\n\n\t\tSuper admin login successful!\n\n";
+            sleep(2);
+            while(1)
+            {
+                super_back:
+                system("CLS");
+                cout<<"\n\n\t\t*Welcome to Super Admin Panel*"<<endl
+                    <<"\t\t------------------------------"<<endl<<endl
+                    <<"\t\t  1. Super Admin work"<<endl
+                    <<"\t\t  2. Admin work"<<endl
+                    <<"\t\t  3. Patient work"<<endl
+                    <<"\t\t  4. Doctor work"<<endl
+                    <<"\t\t  5. Nurse work"<<endl
+                    <<"\t\t  6. Logout"<<endl;
+                string choice;
+                getline(cin,choice);
+                if(choice=="6"||super_logout==1)
+                {
+                    system("CLS");
+                    goto abar;
+                }
+                if(choice=="1")
+                    super_admin_work();
+                else if(choice=="2")
+                    admin_work_from_sp();
+                else if(choice=="3")
+                    welcome_patient();
+                else if(choice=="4")
+                    welcome_doctor();
+                else if(choice=="5")
+                    welcome_nurse();
+                else        //for invalid input
+                {
+                    system("CLS");
+                    cout<<"\n\n\t\tInvalid option. Please Try Again.."<<endl;
+                    sleep(1);
+                }
+                
+            }
+        }
+    }
+
+    
+    if(user=="2") //works from admin side
     {
         logout=0;
         system("CLS");
@@ -67,12 +127,12 @@ int run()
         }
     }
 
-    else if(user=="2")  //doctor er shob kaj
+    else if(user=="3")  //works for doctor 
     {
         login_doctor();
         cout<<"\n\n\t\tDoctor login successful!\n\n";
         sleep(2);
-        while(1)        //  doc log in er porer kaj
+        while(1)        //  after doctor login
         {
             system("CLS");
             cout<<"\n\n\t\t* Welcome Dr. " << dr[log_doc].name << " *" <<endl
@@ -113,7 +173,7 @@ int run()
         }
     }
 
-    else if(user=="3") //patient website e eshe ja dekhbe
+    else if(user=="4") //patient will see this part 
     {
         while(1)
         {

@@ -35,3 +35,5 @@ int n = 0, m,logout=0,back=0; // m is the position of given id while logging in
 #include "check_admin.h"
 #include "show_admin.h"
 #include "update_admin.h"
+
+#include "work_admin_from_sp_side.h"
