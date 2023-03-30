@@ -4,13 +4,13 @@ void welcome_nurse()
 {
     system("CLS");
     cout<<"\n\n\t\tWELCOME TO THE NURSE'S CRUD WORLD\n\n";
-    cout<<"\t\t---------------------------------\n";
+    //cout<<"\t\t---------------------------------\n";
     sleep(1);
     while(1)
     {
         system("CLS");
-        cout<<"\n\n\n\t\tPlease select an option\n";
-        cout<<"\t\t-----------------------\n";
+        cout<<"\n\n\t\tPlease select an option\n\n";
+        //cout<<"\t\t-----------------------\n";
         cout<<"\t\t  1: Add a new nurse\n\n";
         cout<<"\t\t  2: Remove a nurse's Information\n\n";
         cout<<"\t\t  3: Update an old nurse's Information\n\n";

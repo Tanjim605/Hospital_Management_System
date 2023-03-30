@@ -1,32 +1,26 @@
-#include "admin.h"
+// #include "admin.h"
 
-void admin_work()
+void admin_work_from_sp()
 {
     string cc;
     while (1)
     {
         system("CLS");
-        cout << "\n\n\t\tWelcome! *" << admin[m].id << "*" << endl << endl;
+        cout << "\n\n\t\tWelcome! *" << " Super Admin " << "*" << endl << endl;
         cout << "\t\tChoose an Option: \n"
-             //<< "\n\t\t  1: Add-Admin\n"
-             << "\n\t\t  1: Show-Admin\n"
-             << "\n\t\t  2: Update-info\n"<<endl
-             << "\t\tEnter 0 to escape..."<<endl;
+             << "\n\t\t  1: Add-Admin\n"
+             << "\n\t\t  2: Show-Admin\n"
+             << "\n\t\tEnter 0 to escape..."<<endl;
         getline(cin,cc);
-        // if (cc == "1")
-        // {
-        //     system("CLS");
-        //     add_admin();
-        // }
         if (cc == "1")
         {
             system("CLS");
-            show_admin();
+            add_admin();
         }
         else if (cc == "2")
         {
             system("CLS");
-            update_admin();
+            show_admin();
         }
         else if (cc == "0")
         {
