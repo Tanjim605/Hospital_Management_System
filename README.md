@@ -5,9 +5,9 @@
 
 ## 📃Table of Content :
 -   <a href="#Description">Description</a>  
--   <a href="#HUI">How to use it</a>  
--   <a href="#dis">Disclaimer</a>
--   <a href="#con">Contributors</a>
+-   <a href="#how-to-use-it">How to use it</a>  
+-   <a href="#disclaimer">Disclaimer</a>
+-   <a href="#contributors">Contributors</a>
 <!-- -   <a href="#ss">SnapShots</a> -->
 
 
@@ -31,7 +31,7 @@
    - There is an auto ID generator for doctors, patients, and nurses. The patient also gets a room number automatically.
 
 
-# <h2 class="HUI">📜How to use it </h2> 
+# <h2 class="how-to-use-it">📜How to use it</h2> 
 <!-- ## How to use it -->
 
 Just download the zip and run the main.cpp on your IDE, and you will get a **main.exe** file. That is the actual software.
@@ -42,12 +42,12 @@ Just download the zip and run the main.cpp on your IDE, and you will get a **mai
 
 > In the **Super Admin** module super admin user ID is "super1" and the pass is "super2".
 
-#  <h2 class="dis">Disclaimer</h2>
+#  <h2 class="Disclaimer">Disclaimer</h2>
 
  > 🚫 Disclaimer: DON'T TOUCH AND CHANGE last_patient.txt, last_doctor.txt, last_nurse.txt . They are for ID generators.
 
 
-# <h1 class="con">Contributors</h1>
+# <h1 class="Contributors">Contributors</h1>
 <!-- # Contributors_ -->
 - [Ariful Islam](https://github.com/imArif0)
    - 📫 mariful280@gmail.com
