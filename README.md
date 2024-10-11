@@ -52,7 +52,7 @@ Just download the zip and run the main.cpp on your IDE, and you will get a **mai
 - [Ariful Islam](https://github.com/imArif0)
    - 📫 mariful280@gmail.com
 
-- [Kaled Bin Kashem](https://github.com/khaled03121)
+- [Khaled Bin Kashem](https://github.com/khaled03121)
    - 📫 khaledjb03121@gmail.com
 
 - [Kazi Tanjimul Islam](https://github.com/Tanjim605)
